@@ -7,7 +7,7 @@ category: 小说
 lang: zh
 draft: false
 hidden: true
-series: ai-hougong-biannianshi
+series: jiuming-wo-bei-ai-baowei-le
 seriesTitle: 救命，我被AI包围了
 chapter: 2
 ---
