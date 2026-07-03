@@ -342,4 +342,13 @@ export const zh_TW: Translation = {
 	[Key.passwordSubmit]: "解鎖",
 	[Key.passwordError]: "密碼錯誤，請重試。",
 	[Key.passwordProtectedRss]: "本文已加密保護，請訪問網站查看。",
+
+	// 合集
+	[Key.series]: "合集",
+	[Key.allSeries]: "全部合集",
+	[Key.seriesChapter]: "第 {chapter} 章",
+	[Key.seriesChaptersCount]: "章",
+	[Key.backToSeriesToc]: "目錄",
+	[Key.seriesPrevChapter]: "上一章",
+	[Key.seriesNextChapter]: "下一章",
 };

@@ -114,6 +114,9 @@ const descriptionText = description || remarkPluginFrontmatter.excerpt || "";
       category={category || undefined}
       pinned={pinned}
       password={password}
+      series={entry.data.series || undefined}
+      seriesTitle={entry.data.seriesTitle || undefined}
+      chapter={entry.data.chapter}
       className="mb-4 post-meta"
     />
 

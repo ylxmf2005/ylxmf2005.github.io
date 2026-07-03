@@ -1,4 +1,6 @@
 import { setMaxListeners } from "node:events";
+import { readFileSync } from "node:fs";
+import { relative } from "node:path";
 import { unified } from "@astrojs/markdown-remark";
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
@@ -10,6 +12,7 @@ import { defineConfig } from "astro/config";
 import expressiveCode from "astro-expressive-code";
 import icon from "astro-icon";
 import katex from "katex";
+import { globSync } from "glob";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeComponents from "rehype-components"; /* Render the custom directive content */
 import rehypeKatex from "rehype-katex";
@@ -49,6 +52,32 @@ const adapter = process.env.CF_WORKERS
 			prerenderEnvironment: "node",
 		})
 	: undefined;
+
+const postsRoot = "src/content/posts";
+const postFileExtensionPattern = /\.(md|mdx)$/;
+
+function hasHiddenFrontmatter(source) {
+	const frontmatter = source.match(/^---\s*\n([\s\S]*?)\n---/);
+	if (!frontmatter) return false;
+	return /^hidden\s*:\s*(?:true|"true"|'true')\s*(?:#.*)?$/m.test(
+		frontmatter[1],
+	);
+}
+
+function getHiddenPostPaths() {
+	return new Set(
+		globSync(`${postsRoot}/**/*.{md,mdx}`, { nodir: true })
+			.filter((file) => hasHiddenFrontmatter(readFileSync(file, "utf-8")))
+			.map((file) => {
+				const slug = relative(postsRoot, file)
+					.replace(/\\/g, "/")
+					.replace(postFileExtensionPattern, "");
+				return `/posts/${slug}/`;
+			}),
+	);
+}
+
+const hiddenPostPaths = getHiddenPostPaths();
 
 // https://astro.build/config
 export default defineConfig({
@@ -197,6 +226,9 @@ export default defineConfig({
 				if (pathname === "/gallery/" && !siteConfig.pages.gallery) {
 					return false;
 				}
+				if (hiddenPostPaths.has(pathname)) {
+					return false;
+				}
 
 				return true;
 			},
@@ -206,7 +238,8 @@ export default defineConfig({
 	markdown: {
 		processor: unified({
 			remarkPlugins: [
-				...(siteConfig.post.rehypeCallouts.enablePythonMarkdownAdmonitions !== false
+				...(siteConfig.post.rehypeCallouts.enablePythonMarkdownAdmonitions !==
+				false
 					? [remarkAdmonitionToBlockquoteCallout]
 					: []),
 				remarkMath,
@@ -302,4 +335,3 @@ export default defineConfig({
 		},
 	},
 });
-

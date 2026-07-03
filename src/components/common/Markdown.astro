@@ -4,9 +4,11 @@ import "@fontsource-variable/jetbrains-mono";
 
 interface Props {
 	class: string;
+	searchable?: boolean;
 }
+const { searchable = true } = Astro.props;
 const className = Astro.props.class;
 ---
-<div data-pagefind-body class={`prose dark:prose-invert prose-base max-w-none! custom-md ${className}`}>
+<div data-pagefind-body={searchable || undefined} class={`prose dark:prose-invert prose-base max-w-none! custom-md ${className}`}>
     <slot/>
 </div>

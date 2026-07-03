@@ -10,9 +10,11 @@ import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { getRelatedPosts, getSortedPosts } from "@utils/content-utils";
+import { getSeriesNavigation } from "@utils/series-utils";
 import {
 	getFileDirFromPath,
 	getPostUrlBySlug,
+	getSeriesUrl,
 	removeFileExtension,
 } from "@utils/url-utils";
 import { Icon } from "astro-icon/components";
@@ -32,7 +34,7 @@ import { getApiUrlList, processCoverImageSync } from "@/utils/image-utils";
 import { url } from "@/utils/url-utils";
 
 export async function getStaticPaths() {
-	const blogEntries = await getSortedPosts();
+	const blogEntries = await getSortedPosts({ includeHidden: true });
 	return blogEntries.map((entry) => {
 		// 将 id 转换为 slug（移除扩展名）以匹配路由参数
 		const slug = removeFileExtension(entry.id);
@@ -129,6 +131,43 @@ const jsonLd = {
 };
 
 const relatedPosts = await getRelatedPosts(entry, 5);
+
+// 合集导航：文章属于合集时按章节顺序导航，否则保持原有的按发布时间顺序
+const seriesNav = await getSeriesNavigation(entry);
+
+const leftNav = seriesNav
+	? seriesNav.prev
+		? {
+				href: getPostUrlBySlug(seriesNav.prev.id),
+				title: seriesNav.prev.title,
+			}
+		: {
+				href: getSeriesUrl(seriesNav.slug),
+				title: i18n(I18nKey.backToSeriesToc),
+			}
+	: {
+			href: entry.data.nextSlug
+				? getPostUrlBySlug(entry.data.nextSlug)
+				: url("/"),
+			title: entry.data.nextTitle || i18n(I18nKey.home),
+		};
+
+const rightNav = seriesNav
+	? seriesNav.next
+		? {
+				href: getPostUrlBySlug(seriesNav.next.id),
+				title: seriesNav.next.title,
+			}
+		: {
+				href: getSeriesUrl(seriesNav.slug),
+				title: i18n(I18nKey.backToSeriesToc),
+			}
+	: {
+			href: entry.data.prevSlug
+				? getPostUrlBySlug(entry.data.prevSlug)
+				: url("/"),
+			title: entry.data.prevTitle || i18n(I18nKey.home),
+		};
 ---
 
 <MainGridLayout
@@ -144,6 +183,11 @@ const relatedPosts = await getRelatedPosts(entry, 5);
 >
   <!-- KaTeX 按需加载 - 仅在文章页面 -->
   <KatexManager slot="head" />
+  {
+    entry.data.hidden && (
+      <meta slot="head" name="robots" content="noindex, nofollow" />
+    )
+  }
   
   <script
     is:inline
@@ -156,6 +200,7 @@ const relatedPosts = await getRelatedPosts(entry, 5);
   >
     <div
       id="post-container"
+      {...(entry.data.hidden ? { "data-pagefind-ignore": true } : {})}
       class:list={[
         "card-base z-10 px-6 md:px-9 pt-6 pb-4 relative w-full ",
         {},
@@ -211,7 +256,7 @@ const relatedPosts = await getRelatedPosts(entry, 5);
       <!-- title -->
       <div class="relative onload-animation">
         <div
-          data-pagefind-body
+          data-pagefind-body={!entry.data.hidden || undefined}
           data-pagefind-weight="10"
           data-pagefind-meta="title"
           class="transition w-full block font-bold mb-3
@@ -241,6 +286,59 @@ const relatedPosts = await getRelatedPosts(entry, 5);
         }
       </div>
 
+      <!-- 合集导航 -->
+      {
+        seriesNav && (
+          <div class="onload-animation mb-5 rounded-xl bg-(--btn-regular-bg) px-4 py-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+            <div class="flex items-center gap-2 min-w-0">
+              <Icon
+                name="material-symbols:auto-stories-outline-rounded"
+                class="text-xl text-(--btn-content) shrink-0"
+              />
+              <a
+                href={getSeriesUrl(seriesNav.slug)}
+                class="font-bold text-(--btn-content) hover:text-(--primary) transition truncate"
+              >
+                {seriesNav.title}
+              </a>
+              {seriesNav.chapter !== undefined && (
+                <span class="text-sm text-black/50 dark:text-white/50 whitespace-nowrap shrink-0">
+                  {seriesNav.volume ? `${seriesNav.volume} · ` : ""}
+                  {i18n(I18nKey.seriesChapter).replace(
+                    "{chapter}",
+                    String(seriesNav.chapter),
+                  )}
+                </span>
+              )}
+            </div>
+            <div class="flex items-center gap-4 text-sm font-medium ml-auto">
+              {seriesNav.prev && (
+                <a
+                  href={getPostUrlBySlug(seriesNav.prev.id)}
+                  class="text-(--primary) hover:brightness-110 transition whitespace-nowrap"
+                >
+                  {i18n(I18nKey.seriesPrevChapter)}
+                </a>
+              )}
+              <a
+                href={getSeriesUrl(seriesNav.slug)}
+                class="text-(--primary) hover:brightness-110 transition whitespace-nowrap"
+              >
+                {i18n(I18nKey.backToSeriesToc)}
+              </a>
+              {seriesNav.next && (
+                <a
+                  href={getPostUrlBySlug(seriesNav.next.id)}
+                  class="text-(--primary) hover:brightness-110 transition whitespace-nowrap"
+                >
+                  {i18n(I18nKey.seriesNextChapter)}
+                </a>
+              )}
+            </div>
+          </div>
+        )
+      }
+
       <!-- always show cover as long as it has one -->
 
       {
@@ -260,7 +358,7 @@ const relatedPosts = await getRelatedPosts(entry, 5);
 
       {entry.data.password ? (
         <EncryptedPost password={entry.data.password} slug={entry.id} hint={entry.data.passwordHint}>
-          <Markdown class="mb-6 markdown-content onload-animation">
+          <Markdown class="mb-6 markdown-content onload-animation" searchable={!entry.data.hidden}>
             <Content />
           </Markdown>
 
@@ -348,7 +446,7 @@ const relatedPosts = await getRelatedPosts(entry, 5);
         </EncryptedPost>
       ) : (
         <>
-          <Markdown class="mb-6 markdown-content onload-animation">
+          <Markdown class="mb-6 markdown-content onload-animation" searchable={!entry.data.hidden}>
             <Content />
           </Markdown>
 
@@ -510,7 +608,7 @@ const relatedPosts = await getRelatedPosts(entry, 5);
     class="flex flex-col md:flex-row justify-between mb-4 gap-4 overflow-hidden w-full"
   >
     <a
-      href={entry.data.nextSlug ? getPostUrlBySlug(entry.data.nextSlug) : url("/")}
+      href={leftNav.href}
       class="w-full font-bold overflow-hidden active:scale-95"
     >
       <div class="btn-card rounded-2xl w-full h-15 max-w-full px-4 flex items-center justify-start! gap-4">
@@ -519,18 +617,18 @@ const relatedPosts = await getRelatedPosts(entry, 5);
           class="text-[2rem] text-(--primary)"
         />
         <div class="overflow-hidden transition text-ellipsis whitespace-nowrap max-w-[calc(100%-3rem)] text-black/75 dark:text-white/75">
-          {entry.data.nextTitle || i18n(I18nKey.home)}
+          {leftNav.title}
         </div>
       </div>
     </a>
 
     <a
-      href={entry.data.prevSlug ? getPostUrlBySlug(entry.data.prevSlug) : url("/")}
+      href={rightNav.href}
       class="w-full font-bold overflow-hidden active:scale-95"
     >
       <div class="btn-card rounded-2xl w-full h-15 max-w-full px-4 flex items-center justify-end! gap-4">
         <div class="overflow-hidden transition text-ellipsis whitespace-nowrap max-w-[calc(100%-3rem)] text-black/75 dark:text-white/75">
-          {entry.data.prevTitle || i18n(I18nKey.home)}
+          {rightNav.title}
         </div>
         <Icon
           name="material-symbols:chevron-right-rounded"

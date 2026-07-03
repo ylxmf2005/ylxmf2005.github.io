@@ -340,4 +340,13 @@ export const zh_CN: Translation = {
 	[Key.passwordSubmit]: "解锁",
 	[Key.passwordError]: "密码错误，请重试。",
 	[Key.passwordProtectedRss]: "本文已加密保护，请访问网站查看。",
+
+	// 合集
+	[Key.series]: "合集",
+	[Key.allSeries]: "全部合集",
+	[Key.seriesChapter]: "第 {chapter} 章",
+	[Key.seriesChaptersCount]: "章",
+	[Key.backToSeriesToc]: "目录",
+	[Key.seriesPrevChapter]: "上一章",
+	[Key.seriesNextChapter]: "下一章",
 };

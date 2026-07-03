@@ -1,0 +1,77 @@
+---
+import { Icon } from "astro-icon/components";
+import I18nKey from "@/i18n/i18nKey";
+import { i18n } from "@/i18n/translation";
+import MainGridLayout from "@/layouts/MainGridLayout.astro";
+import { formatDateToYYYYMMDD } from "@/utils/date-utils";
+import { getSeriesList } from "@/utils/series-utils";
+import { getSeriesUrl } from "@/utils/url-utils";
+
+const seriesList = await getSeriesList();
+const totalChapters = seriesList.reduce(
+	(sum, series) => sum + series.chapterCount,
+	0,
+);
+---
+
+<MainGridLayout title={i18n(I18nKey.series)}>
+    <!-- 页面标题 -->
+    <div class="card-base px-8 py-6 mb-4">
+        <div class="text-2xl font-bold text-(--primary) mb-2">
+            {i18n(I18nKey.series)}
+        </div>
+        <p class="text-30 text-sm">
+            {i18n(I18nKey.allSeries)} · {totalChapters} {i18n(I18nKey.seriesChaptersCount)}
+        </p>
+    </div>
+
+    <!-- 合集卡片列表 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        {
+            seriesList.map((series, index) => (
+                <a
+                    href={getSeriesUrl(series.slug)}
+                    class="card-base p-6 flex items-center gap-4 group onload-animation"
+                    style={`animation-delay: calc(var(--content-delay) + ${index * 50}ms);`}
+                >
+                    <div class="shrink-0 w-14 h-14 rounded-full bg-(--primary)/10 group-hover:bg-(--primary)/20 flex items-center justify-center transition-colors">
+                        <Icon
+                            name="material-symbols:auto-stories-outline-rounded"
+                            class="text-3xl text-(--primary)"
+                        />
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <h2 class="text-lg font-bold text-90 truncate group-hover:text-(--primary) transition-colors">
+                            {series.title}
+                        </h2>
+                        <p class="text-sm text-30 mt-1 flex flex-wrap items-center gap-x-3 group-hover:text-(--primary)/60 transition-colors">
+                            <span>
+                                {series.chapterCount} {i18n(I18nKey.seriesChaptersCount)}
+                            </span>
+                            <span>{formatDateToYYYYMMDD(series.latestDate)}</span>
+                        </p>
+                    </div>
+                    <div class="shrink-0">
+                        <Icon
+                            name="material-symbols:chevron-right-rounded"
+                            class="text-2xl text-30 group-hover:text-(--primary) transition-colors "
+                        />
+                    </div>
+                </a>
+            ))
+        }
+    </div>
+
+    <!-- 空状态 -->
+    {
+        seriesList.length === 0 && (
+            <div class="card-base px-8 py-12 text-center">
+                <Icon
+                    name="material-symbols:auto-stories-outline-rounded"
+                    class="text-5xl text-30 mx-auto mb-4"
+                />
+                <p class="text-30">{i18n(I18nKey.noData)}</p>
+            </div>
+        )
+    }
+</MainGridLayout>

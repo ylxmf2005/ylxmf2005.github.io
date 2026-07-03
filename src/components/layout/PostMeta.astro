@@ -4,7 +4,7 @@ import { commentConfig } from "@/config";
 import I18nKey from "@/i18n/i18nKey";
 import { i18n } from "@/i18n/translation";
 import { formatDateToYYYYMMDD } from "@/utils/date-utils";
-import { getCategoryUrl, getTagUrl } from "@/utils/url-utils";
+import { getCategoryUrl, getSeriesUrl, getTagUrl } from "@/utils/url-utils";
 
 export interface Props {
 	published: Date;
@@ -22,6 +22,9 @@ export interface Props {
 	customPath?: string;
 	pinned?: boolean;
 	password?: boolean;
+	series?: string;
+	seriesTitle?: string;
+	chapter?: number;
 }
 
 const {
@@ -37,7 +40,18 @@ const {
 	showTags = true,
 	customPath,
 	pinned,
+	series,
+	seriesTitle,
+	chapter,
 } = Astro.props;
+
+const seriesLabel = series
+	? `${seriesTitle || series}${
+			chapter !== undefined
+				? ` · ${i18n(I18nKey.seriesChapter).replace("{chapter}", String(chapter))}`
+				: ""
+		}`
+	: "";
 
 const path = customPath || (id ? `/posts/${id}` : "");
 ---
@@ -104,6 +118,29 @@ const path = customPath || (id ? `/posts/${id}` : "");
       </a>
     </div>
   </div>
+
+  <!-- series -->
+  {
+    series && (
+      <div class="flex items-center min-w-0">
+        <div class="meta-icon">
+          <Icon
+            name="material-symbols:auto-stories-outline-rounded"
+            class="text-xl"
+          />
+        </div>
+        <a
+          href={getSeriesUrl(series)}
+          aria-label={`View all chapters in the ${seriesTitle || series} series`}
+          class="link-lg transition text-50 text-sm font-medium
+                            hover:text-(--primary) dark:hover:text-(--primary)
+                            whitespace-nowrap overflow-hidden text-ellipsis max-w-40 md:max-w-56"
+        >
+          {seriesLabel}
+        </a>
+      </div>
+    )
+  }
 
    <!-- tags -->
    {

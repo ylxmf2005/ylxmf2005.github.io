@@ -329,6 +329,15 @@ enum I18nKey {
 	galleryBackToAlbums = "galleryBackToAlbums",
 	searchAlbums = "searchAlbums",
 
+	// 合集/专栏
+	series = "series",
+	allSeries = "allSeries",
+	seriesChapter = "seriesChapter",
+	seriesChaptersCount = "seriesChaptersCount",
+	backToSeriesToc = "backToSeriesToc",
+	seriesPrevChapter = "seriesPrevChapter",
+	seriesNextChapter = "seriesNextChapter",
+
 	// 密码保护
 	passwordProtected = "passwordProtected",
 	passwordProtectedDesc = "passwordProtectedDesc",

@@ -3,10 +3,43 @@ import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import { getCategoryUrl } from "@utils/url-utils";
 
+export type PostQueryOptions = {
+	includeHidden?: boolean;
+};
+
+function shouldIncludePost(
+	data: CollectionEntry<"posts">["data"],
+	options: PostQueryOptions = {},
+) {
+	if (import.meta.env.PROD && data.draft === true) return false;
+	if (!options.includeHidden && data.hidden === true) return false;
+	return true;
+}
+
+function applyAdjacentPostLinks(posts: CollectionEntry<"posts">[]) {
+	for (const post of posts) {
+		post.data.prevSlug = "";
+		post.data.prevTitle = "";
+		post.data.nextSlug = "";
+		post.data.nextTitle = "";
+	}
+
+	const publicPosts = posts.filter((post) => !post.data.hidden);
+
+	for (let i = 1; i < publicPosts.length; i++) {
+		publicPosts[i].data.nextSlug = publicPosts[i - 1].id;
+		publicPosts[i].data.nextTitle = publicPosts[i - 1].data.title;
+	}
+	for (let i = 0; i < publicPosts.length - 1; i++) {
+		publicPosts[i].data.prevSlug = publicPosts[i + 1].id;
+		publicPosts[i].data.prevTitle = publicPosts[i + 1].data.title;
+	}
+}
+
 // // Retrieve posts and sort them by publication date
-async function getRawSortedPosts() {
+async function getRawSortedPosts(options: PostQueryOptions = {}) {
 	const allBlogPosts = await getCollection("posts", ({ data }) => {
-		return import.meta.env.PROD ? data.draft !== true : true;
+		return shouldIncludePost(data, options);
 	});
 
 	const sorted = allBlogPosts.sort((a, b) => {
@@ -22,17 +55,9 @@ async function getRawSortedPosts() {
 	return sorted;
 }
 
-export async function getSortedPosts() {
-	const sorted = await getRawSortedPosts();
-
-	for (let i = 1; i < sorted.length; i++) {
-		sorted[i].data.nextSlug = sorted[i - 1].id;
-		sorted[i].data.nextTitle = sorted[i - 1].data.title;
-	}
-	for (let i = 0; i < sorted.length - 1; i++) {
-		sorted[i].data.prevSlug = sorted[i + 1].id;
-		sorted[i].data.prevTitle = sorted[i + 1].data.title;
-	}
+export async function getSortedPosts(options: PostQueryOptions = {}) {
+	const sorted = await getRawSortedPosts(options);
+	applyAdjacentPostLinks(sorted);
 
 	return sorted;
 }
@@ -40,8 +65,10 @@ export type PostForList = {
 	id: string;
 	data: CollectionEntry<"posts">["data"];
 };
-export async function getSortedPostsList(): Promise<PostForList[]> {
-	const sortedFullPosts = await getRawSortedPosts();
+export async function getSortedPostsList(
+	options: PostQueryOptions = {},
+): Promise<PostForList[]> {
+	const sortedFullPosts = await getRawSortedPosts(options);
 
 	// delete post.body
 	const sortedPostsList = sortedFullPosts.map((post) => ({
@@ -56,9 +83,11 @@ export type Tag = {
 	count: number;
 };
 
-export async function getTagList(): Promise<Tag[]> {
+export async function getTagList(
+	options: PostQueryOptions = {},
+): Promise<Tag[]> {
 	const allBlogPosts = await getCollection<"posts">("posts", ({ data }) => {
-		return import.meta.env.PROD ? data.draft !== true : true;
+		return shouldIncludePost(data, options);
 	});
 
 	const countMap: { [key: string]: number } = {};
@@ -83,9 +112,11 @@ export type Category = {
 	url: string;
 };
 
-export async function getCategoryList(): Promise<Category[]> {
+export async function getCategoryList(
+	options: PostQueryOptions = {},
+): Promise<Category[]> {
 	const allBlogPosts = await getCollection<"posts">("posts", ({ data }) => {
-		return import.meta.env.PROD ? data.draft !== true : true;
+		return shouldIncludePost(data, options);
 	});
 	const count: { [key: string]: number } = {};
 	allBlogPosts.forEach((post: { data: { category: string | null } }) => {
@@ -161,7 +192,7 @@ export async function getRelatedPosts(
 	maxCount = 5,
 ): Promise<PostForList[]> {
 	const allPosts = await getCollection<"posts">("posts", ({ data }) => {
-		return import.meta.env.PROD ? data.draft !== true : true;
+		return shouldIncludePost(data);
 	});
 
 	// 排除自身和加密文章

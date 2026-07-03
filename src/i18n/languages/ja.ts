@@ -350,4 +350,13 @@ export const ja: Translation = {
 	[Key.passwordError]: "パスワードが間違っています。もう一度お試しください。",
 	[Key.passwordProtectedRss]:
 		"この記事は暗号化されています。ウェブサイトにアクセスしてご覧ください。",
+
+	// シリーズ
+	[Key.series]: "シリーズ",
+	[Key.allSeries]: "すべてのシリーズ",
+	[Key.seriesChapter]: "第 {chapter} 章",
+	[Key.seriesChaptersCount]: "章",
+	[Key.backToSeriesToc]: "目次",
+	[Key.seriesPrevChapter]: "前の章",
+	[Key.seriesNextChapter]: "次の章",
 };

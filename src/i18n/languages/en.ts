@@ -351,4 +351,13 @@ export const en: Translation = {
 	[Key.passwordError]: "Incorrect password, please try again.",
 	[Key.passwordProtectedRss]:
 		"This article is encrypted. Please visit the website to view it.",
+
+	// Series
+	[Key.series]: "Series",
+	[Key.allSeries]: "All Series",
+	[Key.seriesChapter]: "Chapter {chapter}",
+	[Key.seriesChaptersCount]: "chapters",
+	[Key.backToSeriesToc]: "Contents",
+	[Key.seriesPrevChapter]: "Previous Chapter",
+	[Key.seriesNextChapter]: "Next Chapter",
 };
