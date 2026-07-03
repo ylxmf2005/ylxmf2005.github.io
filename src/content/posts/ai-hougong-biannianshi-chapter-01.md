@@ -2,13 +2,13 @@
 title: 第一章 Deadline前夜
 published: 2026-07-03
 description: 操作系统作业截止前夜，段错误和一句求助，把 ChatGPT 叫进了房间。
-tags: [小说, AI后宫编年史]
+tags: [小说, 救命我被AI包围了]
 category: 小说
 lang: zh
 draft: false
 hidden: true
 series: ai-hougong-biannianshi
-seriesTitle: AI后宫编年史
+seriesTitle: 救命，我被AI包围了
 chapter: 1
 ---
 
