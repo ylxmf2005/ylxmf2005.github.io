@@ -34,8 +34,18 @@ export default function rehypeFigure() {
 				imgProps.referrerpolicy = "no-referrer";
 			}
 
-			// 获取 alt 属性
-			const alt = imgProps.alt;
+			// 获取 alt 属性，并支持在末尾用 {sm}/{md}/{lg} 控制文章内图片宽度。
+			const rawAlt = imgProps.alt;
+			const sizeMatch =
+				typeof rawAlt === "string"
+					? rawAlt.match(/\s*\{(sm|md|lg)\}\s*$/)
+					: null;
+			const figureSize = sizeMatch?.[1];
+			const alt =
+				typeof rawAlt === "string" && sizeMatch
+					? rawAlt.replace(/\s*\{(sm|md|lg)\}\s*$/, "")
+					: rawAlt;
+			imgProps.alt = alt;
 
 			// 如果没有 alt 属性或 alt 为空字符串，则只更新属性并保持原样
 			if (!alt || alt.trim() === "") {
@@ -44,13 +54,19 @@ export default function rehypeFigure() {
 			}
 
 			// 创建 figure 元素，包含处理后的 img 和居中的 figcaption
-			const figure = h("figure", [
-				// 使用原始属性的 img 节点
-				h("img", {
-					...imgProps,
-				}),
-				h("figcaption", alt),
-			]);
+			const figure = h(
+				"figure",
+				{
+					className: figureSize ? [`md-figure--${figureSize}`] : [],
+				},
+				[
+					// 使用原始属性的 img 节点
+					h("img", {
+						...imgProps,
+					}),
+					h("figcaption", alt),
+				],
+			);
 
 			// 居中显示
 			const centerFigure = h("center", figure);
