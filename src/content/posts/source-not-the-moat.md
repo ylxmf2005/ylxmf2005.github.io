@@ -75,7 +75,7 @@ _图源：LangChain, [The Art of Loop Engineering](https://www.langchain.com/blo
 
 但跑起来不等于健康。工程对象可以不再是代码，甚至不再是提示词，但回路内部必须是可理解、可干预、可验证的。我把这三个要求缩写成 CCV：Comprehensible, Controllable, Verifiable。
 
-![CCV practice map: Comprehensible, Controllable, and Verifiable converge into the Human Gate and five durable practices {lg}](./images/ccv-practice-map.png)
+![CCV gate map: AI output must pass explainability, steerability, and evidence checks before human release; failed checks trigger repair loops {lg}](./images/ccv-practice-map.png)
 
 可理解，意味着产出不仅要对，还要能被人消化。你要能讲清楚它为什么这么做，改了哪些关键路径，哪些假设支撑了这个方案。可干预，意味着你能把偏好和边界写成规则，而不是每次靠临场感觉。可验证，意味着你不用相信模型的语气，只看证据是否足够。
 
