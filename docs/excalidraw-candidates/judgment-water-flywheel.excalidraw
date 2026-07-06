@@ -30,12 +30,12 @@
     {
       "id": "context_text",
       "type": "text",
-      "x": 105,
-      "y": 196,
-      "width": 120,
-      "height": 58,
-      "text": "人的上下文\n问题 / 价值 / 责任",
-      "originalText": "人的上下文\n问题 / 价值 / 责任",
+      "x": 108,
+      "y": 198,
+      "width": 115,
+      "height": 48,
+      "text": "Context\nvalue / risk",
+      "originalText": "Context\nvalue / risk",
       "fontSize": 18,
       "fontFamily": 3,
       "textAlign": "center",
@@ -82,17 +82,19 @@
       "boundElements": null,
       "link": null,
       "locked": false,
-      "roundness": { "type": 3 }
+      "roundness": {
+        "type": 3
+      }
     },
     {
       "id": "probe_text",
       "type": "text",
-      "x": 356,
-      "y": 196,
-      "width": 90,
-      "height": 58,
-      "text": "探测未知\n盲区扫描",
-      "originalText": "探测未知\n盲区扫描",
+      "x": 350,
+      "y": 198,
+      "width": 102,
+      "height": 48,
+      "text": "Probe\nblind spots",
+      "originalText": "Probe\nblind spots",
       "fontSize": 18,
       "fontFamily": 3,
       "textAlign": "center",
@@ -139,17 +141,19 @@
       "boundElements": null,
       "link": null,
       "locked": false,
-      "roundness": { "type": 3 }
+      "roundness": {
+        "type": 3
+      }
     },
     {
       "id": "options_text",
       "type": "text",
-      "x": 562,
-      "y": 196,
-      "width": 88,
-      "height": 58,
-      "text": "展开选择\n原型对比",
-      "originalText": "展开选择\n原型对比",
+      "x": 552,
+      "y": 198,
+      "width": 105,
+      "height": 48,
+      "text": "Options\nprototypes",
+      "originalText": "Options\nprototypes",
       "fontSize": 18,
       "fontFamily": 3,
       "textAlign": "center",
@@ -200,12 +204,12 @@
     {
       "id": "pressure_text",
       "type": "text",
-      "x": 779,
-      "y": 196,
-      "width": 90,
-      "height": 58,
-      "text": "压测判断\n追问证伪",
-      "originalText": "压测判断\n追问证伪",
+      "x": 768,
+      "y": 198,
+      "width": 115,
+      "height": 48,
+      "text": "Stress test\njudgment",
+      "originalText": "Stress test\njudgment",
       "fontSize": 18,
       "fontFamily": 3,
       "textAlign": "center",
@@ -252,17 +256,19 @@
       "boundElements": null,
       "link": null,
       "locked": false,
-      "roundness": { "type": 3 }
+      "roundness": {
+        "type": 3
+      }
     },
     {
       "id": "ai_text",
       "type": "text",
-      "x": 1002,
-      "y": 196,
-      "width": 78,
-      "height": 58,
-      "text": "AI 执行\n预测行动",
-      "originalText": "AI 执行\n预测行动",
+      "x": 990,
+      "y": 198,
+      "width": 100,
+      "height": 48,
+      "text": "AI acts\npredict / do",
+      "originalText": "AI acts\npredict / do",
       "fontSize": 18,
       "fontFamily": 3,
       "textAlign": "center",
@@ -309,18 +315,20 @@
       "boundElements": null,
       "link": null,
       "locked": false,
-      "roundness": { "type": 3 }
+      "roundness": {
+        "type": 3
+      }
     },
     {
       "id": "evidence_text",
       "type": "text",
-      "x": 1208,
-      "y": 188,
-      "width": 88,
-      "height": 72,
-      "text": "证据产物\ndiff\ntests/logs",
-      "originalText": "证据产物\ndiff\ntests/logs",
-      "fontSize": 17,
+      "x": 1192,
+      "y": 198,
+      "width": 118,
+      "height": 48,
+      "text": "Evidence\ndiff / tests",
+      "originalText": "Evidence\ndiff / tests",
+      "fontSize": 18,
       "fontFamily": 3,
       "textAlign": "center",
       "verticalAlign": "middle",
@@ -366,17 +374,19 @@
       "boundElements": null,
       "link": null,
       "locked": false,
-      "roundness": { "type": 3 }
+      "roundness": {
+        "type": 3
+      }
     },
     {
       "id": "understand_text",
       "type": "text",
-      "x": 967,
+      "x": 970,
       "y": 414,
-      "width": 106,
-      "height": 50,
-      "text": "理解吸收\n走读 / 测验",
-      "originalText": "理解吸收\n走读 / 测验",
+      "width": 95,
+      "height": 48,
+      "text": "Explain\nquiz",
+      "originalText": "Explain\nquiz",
       "fontSize": 18,
       "fontFamily": 3,
       "textAlign": "center",
@@ -423,17 +433,19 @@
       "boundElements": null,
       "link": null,
       "locked": false,
-      "roundness": { "type": 3 }
+      "roundness": {
+        "type": 3
+      }
     },
     {
       "id": "rules_text",
       "type": "text",
-      "x": 1199,
+      "x": 1204,
       "y": 414,
-      "width": 112,
-      "height": 50,
-      "text": "规则沉淀\nlearnings",
-      "originalText": "规则沉淀\nlearnings",
+      "width": 95,
+      "height": 48,
+      "text": "Rules\nlearnings",
+      "originalText": "Rules\nlearnings",
       "fontSize": 18,
       "fontFamily": 3,
       "textAlign": "center",
@@ -484,12 +496,12 @@
     {
       "id": "judgment_text",
       "type": "text",
-      "x": 624,
-      "y": 474,
-      "width": 122,
-      "height": 50,
-      "text": "判断力增量\n下一轮先验",
-      "originalText": "判断力增量\n下一轮先验",
+      "x": 626,
+      "y": 478,
+      "width": 120,
+      "height": 48,
+      "text": "Judgment\ncompounds",
+      "originalText": "Judgment\ncompounds",
       "fontSize": 18,
       "fontFamily": 3,
       "textAlign": "center",
@@ -536,7 +548,16 @@
       "boundElements": null,
       "link": null,
       "locked": false,
-      "points": [[0, 0], [66, 0]],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          66,
+          0
+        ]
+      ],
       "startBinding": null,
       "endBinding": null,
       "startArrowhead": null,
@@ -565,7 +586,16 @@
       "boundElements": null,
       "link": null,
       "locked": false,
-      "points": [[0, 0], [58, 0]],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          58,
+          0
+        ]
+      ],
       "startBinding": null,
       "endBinding": null,
       "startArrowhead": null,
@@ -594,7 +624,16 @@
       "boundElements": null,
       "link": null,
       "locked": false,
-      "points": [[0, 0], [72, 0]],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          0
+        ]
+      ],
       "startBinding": null,
       "endBinding": null,
       "startArrowhead": null,
@@ -623,7 +662,16 @@
       "boundElements": null,
       "link": null,
       "locked": false,
-      "points": [[0, 0], [72, 0]],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          0
+        ]
+      ],
       "startBinding": null,
       "endBinding": null,
       "startArrowhead": null,
@@ -652,7 +700,16 @@
       "boundElements": null,
       "link": null,
       "locked": false,
-      "points": [[0, 0], [58, 0]],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          58,
+          0
+        ]
+      ],
       "startBinding": null,
       "endBinding": null,
       "startArrowhead": null,
@@ -681,7 +738,20 @@
       "boundElements": null,
       "link": null,
       "locked": false,
-      "points": [[0, 0], [-54, 78], [-220, 102]],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -54,
+          78
+        ],
+        [
+          -220,
+          102
+        ]
+      ],
       "startBinding": null,
       "endBinding": null,
       "startArrowhead": null,
@@ -710,7 +780,20 @@
       "boundElements": null,
       "link": null,
       "locked": false,
-      "points": [[0, 0], [0, 78], [-15, 102]],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          78
+        ],
+        [
+          -15,
+          102
+        ]
+      ],
       "startBinding": null,
       "endBinding": null,
       "startArrowhead": null,
@@ -739,7 +822,16 @@
       "boundElements": null,
       "link": null,
       "locked": false,
-      "points": [[0, 0], [-138, 38]],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -138,
+          38
+        ]
+      ],
       "startBinding": null,
       "endBinding": null,
       "startArrowhead": null,
@@ -768,7 +860,20 @@
       "boundElements": null,
       "link": null,
       "locked": false,
-      "points": [[0, 0], [-130, 98], [-520, 70]],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -130,
+          98
+        ],
+        [
+          -520,
+          70
+        ]
+      ],
       "startBinding": null,
       "endBinding": null,
       "startArrowhead": null,
@@ -797,7 +902,20 @@
       "boundElements": null,
       "link": null,
       "locked": false,
-      "points": [[0, 0], [-300, 0], [-410, -214]],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -300,
+          0
+        ],
+        [
+          -410,
+          -214
+        ]
+      ],
       "startBinding": null,
       "endBinding": null,
       "startArrowhead": null,

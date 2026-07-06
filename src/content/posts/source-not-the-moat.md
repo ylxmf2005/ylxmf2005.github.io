@@ -25,7 +25,7 @@ Bainbridge 担心的是“人不会操作了”。AI 时代的问题更深一层
 
 Agrawal、Gans 和 Goldfarb 在 [《Prediction Machines》](https://www-2.rotman.utoronto.ca/insightshub/ai-analytics-big-data/prediction-machines-simple-eco) 中给出了一个清晰框架：任何决策都包含五个要素：数据、预测、判断、行动和结果。随着 AI 让“预测”和“行动”变得极其便宜，人类的核心竞争力自然转移到另外三个环节：提供上下文、行使判断、承担结果。
 
-![Prediction Machines 中的 Figure 7-1：Anatomy of a task，展示数据、预测、判断、行动和结果如何构成任务链条 {md}](./images/prediction-machines-anatomy-task.png)
+![Prediction Machines, Figure 7-1: Anatomy of a task, where data, prediction, judgment, action, and outcome form the task loop {md}](./images/prediction-machines-anatomy-task.png)
 
 _图源：《Prediction Machines》，Figure 7-1，Anatomy of a task。_
 
@@ -57,7 +57,7 @@ _图源：《Prediction Machines》，Figure 7-1，Anatomy of a task。_
 
 人比模型占便宜的地方是样本效率。模型更新偏好要成千上万条标注，人只要看少量摊开的决策过程，就能刷新自己对“好判断”的直觉。这意味着，如果回路是透明的，人的判断力可以形成一个自我加速的飞轮。
 
-![判断力水源飞轮：探测未知、展开选择、压测判断、证据裁决、理解吸收和规则沉淀共同构成判断力增量 {lg}](./images/judgment-water-flywheel.png)
+![Judgment water flywheel: probe blind spots, generate options, stress judgment, inspect evidence, explain, codify rules, and compound judgment {lg}](./images/judgment-water-flywheel.png)
 
 这张图里最重要的不是 AI 执行，而是执行前后的那几段：发现未知、展开选择、压测判断、证据裁决、理解吸收、规则沉淀。它们看起来像流程，其实是在制造反馈密度。判断力更强，你就能识别更好的产出；给模型更精确的约束，模型表现更好；模型给出更微妙的方案，你又能审问得更深。判断力由此继续增长。
 
@@ -69,13 +69,13 @@ _图源：《Prediction Machines》，Figure 7-1，Anatomy of a task。_
 
 第二，飞轮必须不是黑箱。Loop Engineering 解决的是“如何让回路跑起来”，把人从逐轮提示的人，变成设计循环的人。它的价值很清楚：系统可以自己发现任务、分发任务、调用 agent、检查结果、记录状态，再决定下一步。
 
-![LangChain《The Art of Loop Engineering》中的事件循环图，展示 agent 如何围绕状态、工具、记忆和消息循环运转 {lg}](./images/langchain-loop-engineering-event-loop.png)
+![LangChain, The Art of Loop Engineering: an agent event loop around state, tools, memory, and messages {lg}](./images/langchain-loop-engineering-event-loop.png)
 
 _图源：LangChain, [The Art of Loop Engineering](https://www.langchain.com/blog/the-art-of-loop-engineering)。_
 
 但跑起来不等于健康。工程对象可以不再是代码，甚至不再是提示词，但回路内部必须是可理解、可干预、可验证的。我把这三个要求缩写成 CCV：Comprehensible, Controllable, Verifiable。
 
-![CCV 实践图：可理解、可干预、可验证共同支撑 Human Gate，并落到规则、裁决、探测、走读和留痕五种实践 {lg}](./images/ccv-practice-map.png)
+![CCV practice map: Comprehensible, Controllable, and Verifiable converge into the Human Gate and five durable practices {lg}](./images/ccv-practice-map.png)
 
 可理解，意味着产出不仅要对，还要能被人消化。你要能讲清楚它为什么这么做，改了哪些关键路径，哪些假设支撑了这个方案。可干预，意味着你能把偏好和边界写成规则，而不是每次靠临场感觉。可验证，意味着你不用相信模型的语气，只看证据是否足够。
 
@@ -97,7 +97,7 @@ _图源：LangChain, [The Art of Loop Engineering](https://www.langchain.com/blo
 
 判断力退化的一个隐蔽原因是：你不知道自己不知道什么。问题空间可以粗略分成四块：已知的已知、已知的未知、未知的已知、未知的未知。
 
-![未知矩阵：把未知的未知转化成已知的未知，把未知的已知用原型和对比逼出来，再进入可行动判断 {md}](./images/unknown-matrix.png)
+![Unknown matrix: probe blind spots into known unknowns, research gaps into known knowns, and prototype tacit knowledge into judgment {md}](./images/unknown-matrix.png)
 
 顶尖的 agent 操控者，往往不是 prompt 写得更花，而是未知更少。他们对代码库、问题域和模型行为都有深度同步。但他们也不假设自己没有盲区。减少未知，为未知做预案，本身就是在练判断力。
 
