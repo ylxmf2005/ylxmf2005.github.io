@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://ylxmf2005.github.io/sitemap-index.xml
