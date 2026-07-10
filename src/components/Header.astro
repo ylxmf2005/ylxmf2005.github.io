@@ -27,10 +27,10 @@ const pathWithoutTrailingSlash =
 
 const currentPath = stripLocale(pathWithoutTrailingSlash, locale);
 const targetLocale = locale === "en" ? "zh-CN" : "en";
-const languageHref = getRelativeLocaleUrl(
-  targetLocale,
-  currentPath.replace(/^\/+/, "")
-);
+const languagePath = currentPath.startsWith("/tags/")
+  ? "tags"
+  : currentPath.replace(/^\/+/, "");
+const languageHref = getRelativeLocaleUrl(targetLocale, languagePath);
 const languageLabel =
   targetLocale === "en" ? t.a11y.switchToEnglish : t.a11y.switchToChinese;
 

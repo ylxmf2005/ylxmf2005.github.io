@@ -1,0 +1,10 @@
+---
+import PostPage from "../../../posts/[...slug]/index.astro";
+import { getPostPageProps } from "@/utils/getPostPageProps";
+
+export async function getStaticPaths() {
+  return getPostPageProps("en");
+}
+---
+
+<PostPage {...Astro.props} />

@@ -33,12 +33,8 @@ export default defineConfig({
   i18n: {
     locales: ["zh-CN", "en"],
     defaultLocale: "zh-CN",
-    fallback: {
-      en: "zh-CN",
-    },
     routing: {
       prefixDefaultLocale: false,
-      fallbackType: "rewrite",
     },
   },
   markdown: {

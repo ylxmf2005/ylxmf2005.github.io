@@ -1,4 +1,7 @@
 export interface UIStrings {
+  site: {
+    description: string;
+  };
   nav: {
     home: string;
     posts: string;
@@ -19,6 +22,8 @@ export interface UIStrings {
     editPage: string;
     previousPost: string;
     nextPost: string;
+    copyCode: string;
+    copiedCode: string;
   };
   pagination: {
     prev: string;
@@ -60,6 +65,12 @@ export interface UIStrings {
     noResults: string;
     goToPreviousPage: string;
     goToNextPage: string;
+    paginationNavigation: string;
+    breadcrumb: string;
+    rssFeed: string;
+    zoomImage: string;
+    imagePreview: string;
+    closeImagePreview: string;
     switchToEnglish: string;
     switchToChinese: string;
   };

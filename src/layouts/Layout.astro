@@ -4,6 +4,7 @@ import { ClientRouter } from "astro:transitions";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { resolveDefaultOgImagePath } from "@/utils/resolveDefaultOgImagePath";
 import { getAssetPath, stripBase, stripLocale } from "@/utils/withBase";
+import { useTranslations } from "@/i18n";
 import config from "@/config";
 import "@/styles/global.css";
 
@@ -15,27 +16,35 @@ type Props = {
 };
 
 const { site } = config;
+const currentLocale = Astro.currentLocale ?? config.site.lang;
+const t = useTranslations(currentLocale);
 
 const {
   title = site.title,
-  description = site.description,
+  description = t.site.description,
   ogImage = resolveDefaultOgImagePath(config),
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
 } = Astro.props;
 
 const socialImageURL = new URL(ogImage, Astro.site ?? Astro.url);
-const rssHref = getRelativeLocaleUrl(config.site.lang, "rss.xml");
-const currentLocale = Astro.currentLocale ?? config.site.lang;
+const rssHref = getAssetPath(currentLocale === "en" ? "en/rss.xml" : "rss.xml");
 const localeNeutralPath = stripLocale(
   stripBase(Astro.url.pathname),
   currentLocale
 ).replace(/^\/+/, "");
+const isTagDetail = localeNeutralPath.startsWith("tags/");
 const chineseURL = new URL(
-  getRelativeLocaleUrl("zh-CN", localeNeutralPath),
+  getRelativeLocaleUrl(
+    "zh-CN",
+    isTagDetail && currentLocale !== "zh-CN" ? "tags" : localeNeutralPath
+  ),
   Astro.site
 ).href;
 const englishURL = new URL(
-  getRelativeLocaleUrl("en", localeNeutralPath),
+  getRelativeLocaleUrl(
+    "en",
+    isTagDetail && currentLocale !== "en" ? "tags" : localeNeutralPath
+  ),
   Astro.site
 ).href;
 ---

@@ -1,6 +1,10 @@
 import type { UIStrings } from "../types";
 
 export default {
+  site: {
+    description:
+      "研究并构建 AI 智能体，关注智能体评测、智能体基础设施与 Coding Agent。",
+  },
   nav: {
     home: "首页",
     posts: "文章",
@@ -21,6 +25,8 @@ export default {
     editPage: "编辑页面",
     previousPost: "上一篇",
     nextPost: "下一篇",
+    copyCode: "复制",
+    copiedCode: "已复制",
   },
   pagination: {
     prev: "上一页",
@@ -62,6 +68,12 @@ export default {
     noResults: "没有结果",
     goToPreviousPage: "转到上一页",
     goToNextPage: "转到下一页",
+    paginationNavigation: "分页导航",
+    breadcrumb: "面包屑导航",
+    rssFeed: "RSS 订阅",
+    zoomImage: "放大图片",
+    imagePreview: "图片预览",
+    closeImagePreview: "关闭图片预览",
     switchToEnglish: "切换到英文",
     switchToChinese: "切换到中文",
   },

@@ -1,6 +1,10 @@
 import type { UIStrings } from "../types";
 
 export default {
+  site: {
+    description:
+      "Researching and building AI agents, with a focus on evaluation, agent infrastructure, and coding agents.",
+  },
   nav: {
     home: "Home",
     posts: "Posts",
@@ -21,6 +25,8 @@ export default {
     editPage: "Edit page",
     previousPost: "Previous Post",
     nextPost: "Next Post",
+    copyCode: "Copy",
+    copiedCode: "Copied",
   },
   pagination: {
     prev: "Prev",
@@ -62,6 +68,12 @@ export default {
     noResults: "No results found",
     goToPreviousPage: "Go to previous page",
     goToNextPage: "Go to next page",
+    paginationNavigation: "Pagination navigation",
+    breadcrumb: "Breadcrumb",
+    rssFeed: "RSS feed",
+    zoomImage: "Zoom image",
+    imagePreview: "Image preview",
+    closeImagePreview: "Close image preview",
     switchToEnglish: "Switch to English",
     switchToChinese: "Switch to Chinese",
   },
