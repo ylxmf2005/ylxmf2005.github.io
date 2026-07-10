@@ -2,10 +2,11 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://ylxmf2005.github.io/",
-    title: "Ethan Lee",
-    description: "AI, cognition, and what's left for humans to decide.",
-    author: "Ethan Lee",
+    url: "https://efgli.com/",
+    title: "Ethan Li",
+    description:
+      "Researching and building AI agents, with a focus on evaluation, agent infrastructure, and coding agents.",
+    author: "Ethan Li",
     profile: "https://github.com/ylxmf2005",
     ogImage: "default-og.jpg",
     lang: "zh-CN",

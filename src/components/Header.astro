@@ -26,6 +26,13 @@ const pathWithoutTrailingSlash =
     : relativePath;
 
 const currentPath = stripLocale(pathWithoutTrailingSlash, locale);
+const targetLocale = locale === "en" ? "zh-CN" : "en";
+const languageHref = getRelativeLocaleUrl(
+  targetLocale,
+  currentPath.replace(/^\/+/, "")
+);
+const languageLabel =
+  targetLocale === "en" ? t.a11y.switchToEnglish : t.a11y.switchToChinese;
 
 const isActive = (path: string) => {
   const currentPathArray = currentPath.split("/").filter(p => p.trim());
@@ -143,6 +150,18 @@ const isActive = (path: string) => {
             </li>
           )
         }
+        <li class="col-span-1 flex items-center justify-center">
+          <a
+            href={languageHref}
+            class="focus-outline hover:text-accent flex size-12 items-center justify-center font-medium sm:size-8"
+            lang={targetLocale}
+            hreflang={targetLocale}
+            title={languageLabel}
+            aria-label={languageLabel}
+          >
+            {targetLocale === "en" ? "EN" : "中"}
+          </a>
+        </li>
         {
           features.lightAndDarkMode && (
             <li class="col-span-1 flex items-center justify-center">

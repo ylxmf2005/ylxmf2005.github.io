@@ -62,6 +62,8 @@ export default {
     noResults: "没有结果",
     goToPreviousPage: "转到上一页",
     goToNextPage: "转到下一页",
+    switchToEnglish: "切换到英文",
+    switchToChinese: "切换到中文",
   },
   notFound: {
     title: "404 Not Found",

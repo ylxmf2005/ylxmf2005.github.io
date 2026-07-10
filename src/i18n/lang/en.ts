@@ -62,6 +62,8 @@ export default {
     noResults: "No results found",
     goToPreviousPage: "Go to previous page",
     goToNextPage: "Go to next page",
+    switchToEnglish: "Switch to English",
+    switchToChinese: "Switch to Chinese",
   },
   notFound: {
     title: "404 Not Found",
