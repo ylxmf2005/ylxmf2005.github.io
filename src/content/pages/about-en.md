@@ -11,9 +11,9 @@ My current work centers on AI agents: how to evaluate them beyond a single bench
 
 I am particularly interested in three connected directions:
 
-- **Agent evaluation:** Understanding and improving agent behavior in real-world settings.
-- **Agent harnesses and infrastructure:** Building the context and systems that make agents work.
-- **Coding agents:** Making software agents more capable, reliable, and useful.
+- **Agent evaluation:** Evaluating judgment, trajectories, and failure patterns beyond benchmark scores and across real-world tasks.
+- **Agent harnesses and infrastructure:** Building context, memory, skills, tools, sandboxes, and runtimes that make agents reliable and effective.
+- **Coding agents:** Designing software-agent loops that can plan, execute, verify, and evolve with human or expert oversight.
 
 ## Research and engineering
 
