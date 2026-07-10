@@ -19,7 +19,11 @@ I am particularly interested in three connected questions:
 
 I tend to work where research meets engineering. I enjoy turning ideas into systems that can be run, observed, and tested, rather than leaving them as isolated prototypes.
 
-Recently, I have been building [CLIClaw](https://github.com/ylxmf2005/AgentCorp), where I explore persistent agents, multi-agent collaboration, task lifecycles, and real-time observability. I am also a co-author and maintainer of [Open LLM VTuber](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber), working on real-time voice interaction, multimodal experiences, and agent dialogue systems. Earlier work includes SecEval, mobile UI agents, and research on evaluating social reasoning in LLMs.
+At Tencent PCG, I currently work on Cheso Agent and model API services, including data and performance monitoring, statistical analysis, and load testing.
+
+I also build [AgentCorp](https://github.com/ylxmf2005/AgentCorp), a loop-engineering system for software delivery. Through skills and quality gates spanning requirements, design, implementation, review, testing, and acceptance, it makes agent work controllable, understandable, and verifiable across both Claude Code and Codex.
+
+Previously, at Tencent Security Xuanwu Lab, I worked on [SecEval](https://github.com/XuanwuAI/SecEval), a benchmark for evaluating foundation models' cybersecurity knowledge with more than 2,000 questions across nine security domains.
 
 ## Writing
 

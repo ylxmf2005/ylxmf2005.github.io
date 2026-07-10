@@ -19,7 +19,11 @@ description: 关于 Ethan Li，以及他在 AI 智能体评测、基础设施与
 
 我的兴趣位于研究与工程的交界处。我喜欢把研究想法实现为能够运行、观察和评估的系统，而不只是停留在独立的原型上。
 
-近期我在构建 [CLIClaw](https://github.com/ylxmf2005/AgentCorp)，探索持久化 Agent、多 Agent 协作、任务生命周期和实时可观测性。我也是 [Open LLM VTuber](https://github.com/Open-LLM-VTuber/Open-LLM-VTuber) 的联合作者与维护者，参与实时语音、多模态交互和 Agent 对话系统的开发。更早之前，我参与了 SecEval、移动端 UI Agent 和 LLM 社会推理评测等研究与项目。
+在腾讯 PCG，我目前参与 Cheso Agent 与模型 API 服务的建设，工作涉及数据与性能监测、统计分析和压测。
+
+我也在开发 [AgentCorp](https://github.com/ylxmf2005/AgentCorp)，一个面向软件交付的 Loop Engineering 系统。它通过覆盖需求、设计、实现、评审、测试和验收的技能与质量门禁，让 Agent 的工作过程变得可控、可理解、可验证，并同时支持 Claude Code 与 Codex。
+
+此前在腾讯安全玄武实验室，我参与构建了 [SecEval](https://github.com/XuanwuAI/SecEval)：一个用于评估基础模型网络安全知识的 benchmark，包含九个安全领域的 2,000 余道题目。
 
 ## 写作
 
