@@ -9,17 +9,17 @@ Hi, I'm Ethan Li. I'm a Computer Science undergraduate at The Hong Kong Polytech
 
 My current work centers on AI agents: how to evaluate them beyond a single benchmark score, how agent harnesses and infrastructure shape their reliability and capability, and how coding agents can be built into genuinely useful systems.
 
-I am particularly interested in three connected questions:
+I am particularly interested in three connected directions:
 
-- **Agent evaluation:** How can we design tasks, environments, and analyses that explain why an agent succeeds or fails, rather than reporting only a final score?
-- **Agent harnesses and infrastructure:** How do runtimes, tools, context, observability, and multi-agent orchestration shape model behavior on real tasks?
-- **Coding agents:** How can coding agents understand codebases, carry out long-running tasks, and collaborate more reliably with people and other agents?
+- **Agent evaluation:** Rather than producing another aggregate score, I care about the model characteristics that scores hide but real use exposes: judgment under underspecified goals, the balance between initiative and restraint, audience and channel discipline, and how these behaviors change across tasks, trajectories, and harnesses. The point of evaluation is not only to rank agents, but to turn trajectory-level evidence into signals for improving models, prompts, and agent loops.
+- **Agent harnesses and infrastructure:** Context management is the center of the problem: what enters the context, what should be compressed or forgotten, what must be retrieved at the right moment, and how memory and skills participate in decisions. Around that, I study how prompts, tool interfaces, sandboxes, runtimes, feedback loops, and multi-agent orchestration turn a model into a working agent. Observability is a means to inspect, debug, and improve that loop.
+- **Coding agents:** My focus is not one-shot code generation, but loop engineering for long-running software work: agents that plan, implement, review, test, and reflect inside comprehensible, controllable, and verifiable (CCV) loops. I am interested in turning failure signals into self-evolving rules and skills while keeping a human or domain expert genuinely involved in judgment, so automation compounds expertise rather than eroding it.
 
 ## Research and engineering
 
 I tend to work where research meets engineering. I enjoy turning ideas into systems that can be run, observed, and tested, rather than leaving them as isolated prototypes.
 
-At Tencent PCG, I currently work on Cheso Agent and model API services, including data and performance monitoring, statistical analysis, and load testing.
+At Tencent PCG, I currently work on Venus, Vedas/Cheso, and model API services, including data and performance monitoring, statistical analysis, and load testing.
 
 I also build [AgentCorp](https://github.com/ylxmf2005/AgentCorp), a loop-engineering system for software delivery. Through skills and quality gates spanning requirements, design, implementation, review, testing, and acceptance, it makes agent work controllable, understandable, and verifiable across both Claude Code and Codex.
 
