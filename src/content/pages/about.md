@@ -11,9 +11,9 @@ description: 关于 Ethan Li，以及他在 AI 智能体评测、基础设施与
 
 我尤其关心三个相互关联的方向：
 
-- **智能体评测**：超越汇总分数的行为评测，关注判断力、轨迹，以及能够推动 Agent 改进的信号。
-- **Agent Harness 与基础设施**：以上下文管理为核心，关注 Prompt、记忆、Skills、工具、Sandbox、运行时与编排。
-- **Coding Agent**：面向软件交付的 Loop Engineering、自演化系统，以及 Human/Expert in the Loop。
+- **智能体评测**：理解并改进 Agent 在真实任务中的表现。
+- **Agent Harness 与基础设施**：构建让 Agent 有效运行的上下文与系统基础设施。
+- **Coding Agent**：让软件智能体更强、更可靠、更实用。
 
 ## 研究与工程
 

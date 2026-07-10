@@ -11,9 +11,9 @@ My current work centers on AI agents: how to evaluate them beyond a single bench
 
 I am particularly interested in three connected directions:
 
-- **Agent evaluation:** Behavioral evaluation beyond aggregate scores, with an emphasis on judgment, trajectories, and signals for improving agents.
-- **Agent harnesses and infrastructure:** Context management and the surrounding prompts, memory, skills, tools, sandboxes, runtimes, and orchestration.
-- **Coding agents:** Loop engineering, self-evolving systems, and human/expert-in-the-loop software delivery.
+- **Agent evaluation:** Understanding and improving agent behavior in real-world settings.
+- **Agent harnesses and infrastructure:** Building the context and systems that make agents work.
+- **Coding agents:** Making software agents more capable, reliable, and useful.
 
 ## Research and engineering
 
