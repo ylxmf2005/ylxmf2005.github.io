@@ -27,7 +27,7 @@ const {
 } = Astro.props;
 
 const socialImageURL = new URL(ogImage, Astro.site ?? Astro.url);
-const rssHref = getAssetPath(currentLocale === "en" ? "en/rss.xml" : "rss.xml");
+const rssHref = getAssetPath(currentLocale === "en" ? "rss.xml" : "zh/rss.xml");
 const localeNeutralPath = stripLocale(
   stripBase(Astro.url.pathname),
   currentLocale
@@ -63,7 +63,7 @@ const englishURL = new URL(
     <link rel="canonical" href={canonicalURL} />
     <link rel="alternate" hreflang="zh-CN" href={chineseURL} />
     <link rel="alternate" hreflang="en" href={englishURL} />
-    <link rel="alternate" hreflang="x-default" href={chineseURL} />
+    <link rel="alternate" hreflang="x-default" href={englishURL} />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Font -->

@@ -1,7 +1,7 @@
 import { getCollection } from "astro:content";
 import { getPostSlug } from "./getPostPaths";
 import { getSortedPosts } from "./getSortedPosts";
-import { isPostPublished } from "./postFilter";
+import { postFilter } from "./postFilter";
 import { isPostInLocale } from "./postLocale";
 
 export async function getPostPageProps(locale: string) {
@@ -10,7 +10,7 @@ export async function getPostPageProps(locale: string) {
   );
   const visiblePosts = getSortedPosts(posts);
 
-  return posts.filter(isPostPublished).map(post => {
+  return posts.filter(postFilter).map(post => {
     const index = visiblePosts.findIndex(({ id }) => id === post.id);
 
     return {

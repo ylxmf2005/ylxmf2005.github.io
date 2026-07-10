@@ -9,7 +9,7 @@ import config from "@/config";
 export const getStaticPaths = (async ({ paginate }) => {
   const posts = await getCollection(
     "posts",
-    post => !post.data.draft && isPostInLocale(post, "en")
+    post => !post.data.draft && isPostInLocale(post, "zh-CN")
   );
   return paginate(getSortedPosts(posts), { pageSize: config.posts.perPage });
 }) satisfies GetStaticPaths;

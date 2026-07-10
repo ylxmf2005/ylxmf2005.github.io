@@ -9,7 +9,7 @@ export default defineAstroPaperConfig({
     author: "Ethan Li",
     profile: "https://github.com/ylxmf2005",
     ogImage: "default-og.jpg",
-    lang: "zh-CN",
+    lang: "en",
     timezone: "Asia/Shanghai",
     dir: "ltr",
   },

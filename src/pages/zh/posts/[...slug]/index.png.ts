@@ -1,6 +1,7 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import { getPostSlug } from "@/utils/getPostPaths";
+import { postFilter } from "@/utils/postFilter";
 import { isPostInLocale } from "@/utils/postLocale";
 import config from "@/config";
 import { GET as renderDynamicOgImage } from "../../../posts/[...slug]/index.png";
@@ -13,7 +14,7 @@ export async function getStaticPaths() {
   const posts = await getCollection("posts").then(items =>
     items.filter(
       post =>
-        !post.data.draft && !post.data.ogImage && isPostInLocale(post, "en")
+        postFilter(post) && !post.data.ogImage && isPostInLocale(post, "zh-CN")
     )
   );
 

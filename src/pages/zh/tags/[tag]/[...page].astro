@@ -11,7 +11,7 @@ import config from "@/config";
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const posts = await getCollection(
     "posts",
-    post => !post.data.draft && isPostInLocale(post, "en")
+    post => !post.data.draft && isPostInLocale(post, "zh-CN")
   );
   const tags = getUniqueTags(posts);
 

@@ -1,13 +1,16 @@
+import { getPathByLocale } from "astro:i18n";
+
 const base = import.meta.env.BASE_URL.replace(/\/+$/, "");
 const baseRoot = base === "" ? "/" : `${base}/`;
 
 /**
  * Strip a locale prefix from a root-relative pathname.
- * e.g. with locale "en": "/en/posts/foo" → "/posts/foo", "/en" → "/"
+ * Supports locales whose URL path differs from their language code.
+ * e.g. with locale "zh-CN": "/zh/posts/foo" → "/posts/foo", "/zh" → "/"
  * Paths that don't start with the locale prefix are returned unchanged.
  */
 export function stripLocale(pathname: string, locale: string): string {
-  const prefix = `/${locale}`;
+  const prefix = `/${getPathByLocale(locale)}`;
   if (pathname === prefix) return "/";
   if (pathname.startsWith(`${prefix}/`)) return pathname.slice(prefix.length);
   return pathname;
