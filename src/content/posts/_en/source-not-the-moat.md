@@ -1,5 +1,5 @@
 ---
-title: "Judgment Is Not a Moat, but a Water Source: Keeping Humans in the AI Loop"
+title: "Judgment Is Not a Moat, but a Water Source"
 published: 2026-06-15
 updated: 2026-07-06
 description: Once AI makes prediction and action cheap, what matters is not a static human advantage but a loop that continuously develops judgment.
