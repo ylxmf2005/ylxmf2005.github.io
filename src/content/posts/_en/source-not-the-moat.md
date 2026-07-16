@@ -1,8 +1,8 @@
 ---
 title: "Judgment Is Not a Moat, but a Water Source"
 published: 2026-06-15
-updated: 2026-07-06
-description: Once AI makes prediction and action cheap, what matters is not a static human advantage but a loop that continuously develops judgment.
+updated: 2026-07-16
+description: As AI makes prediction and action cheap, what remains scarce is not a static capability but a loop that continually regenerates context, judgment, and accountability.
 tags: [AI, agents, workflow, cognition]
 category: Essays
 lang: en
@@ -10,128 +10,267 @@ draft: false
 ogImage: https://efgli.com/default-og.jpg
 ---
 
-Have you ever had this feeling? A thought barely appears in your mind before your hand has already sent it to AI. The model either gives you a conclusion or walks you through the reasoning step by step. The process is smooth and the output looks polished. Yet when you look back, what remains is not a coherent line of thought but a pile of disconnected fragments. I remember the conclusion, but I cannot explain how I reached it.
+I have become increasingly wary of a certain kind of frictionless work.
 
-Psychology calls this cognitive offloading: when people believe information will remain available later, they are less likely to remember it. We handed memory to search engines long ago. Now we are also handing over the cognitive work of connecting fragments into a whole.
+I give a task to AI. It researches, writes code, runs tests, and returns a polished summary. Everything looks professional. I can read every line of the diff, yet I cannot explain why it chose this structure. The tests are green, yet I do not know whether they cover the behavior that actually matters. When I want to change the system again, I first have to ask the AI: what exactly did we just do?
 
-Cognitive offloading is not new, but its scope is expanding. We used to outsource memory. Now we outsource the reasoning process itself, even though reasoning is the muscle that keeps judgment alive.
+The work is finished, but the understanding is gone.
 
-In 1983, cognitive psychologist Lisanne Bainbridge described a paradox in _Ironies of Automation_: the more advanced automation becomes, the fewer but more difficult the situations left for human operators. Yet advanced skills depend on frequent practice. Once automation takes over routine work, operators become monitors and may be least prepared at the exact moment an emergency demands expertise. This applies not only to physical skills but to cognition. Human judgment stays sharp through feedback that is fast, frequent, and consequential.
+This is different from forgetting a fact. Search engines outsourced the storage of facts. AI is beginning to outsource the process of connecting those facts, making tradeoffs, and forming a plan. Psychology calls the former cognitive offloading. The age of agents adds another layer: we are offloading not only memory and reasoning, but action itself.
 
-Bainbridge worried that people would forget how to operate. The AI-era problem goes one layer deeper: people may forget how to judge and lose control of the work.
+That is not an argument for rejecting AI. Stronger models should take on harder, longer, and more complete tasks. The real question is this: once prediction and action are outsourced, how can people step away from execution without also stepping away from understanding, judgment, and responsibility?
 
-Traditional automation fails visibly and hands control back to you. At least you know when to intervene. AI does not. It continues producing answers that may be wrong but remain well formatted, calmly phrased, and apparently complete. You must keep deciding whether an answer is correct, trustworthy, or worth changing. Judgment becomes a routine operation rather than an emergency response, and because it happens every day, it is easy to stop noticing it.
+I no longer think the phrase “human in the loop” is enough. A person can remain in the loop without controlling it. Someone whose only job is to click Accept is technically in the loop, but may no longer be participating in any meaningful sense.
 
-Where, then, do judgment and control sit in the decision chain?
+What we should design instead is a loop that produces two outputs at once: completed work, and a person whose judgment is stronger than it was at the start.
 
-Agrawal, Gans, and Goldfarb offer a useful framework in [_Prediction Machines_](https://www-2.rotman.utoronto.ca/insightshub/ai-analytics-big-data/prediction-machines-simple-eco). Any decision can be decomposed into five elements: data, prediction, judgment, action, and outcome. Their economic argument is simple: AI is fundamentally a prediction technology that lowers the cost of prediction. When something becomes cheaper, the value of its complements rises. Judgment is the complement to prediction. Every prediction needs an answer to "what do I want?" before it can become a decision. The cheaper and more abundant prediction becomes, the more valuable judgment becomes.
+## When Production Gets Cheaper, Scarcity Moves
+
+In [*Prediction Machines*](https://www-2.rotman.utoronto.ca/insightshub/ai-analytics-big-data/prediction-machines-simple-eco), Agrawal, Gans, and Goldfarb break a task into five components: data, prediction, judgment, action, and outcome.
 
 ![Prediction Machines, Figure 7-1: Anatomy of a task, where data, prediction, judgment, action, and outcome form the decision chain {md}](../images/prediction-machines-anatomy-task.png)
 
-_Source: Prediction Machines, Figure 7-1, "Anatomy of a Task."_
+*Source: Prediction Machines, Figure 7-1, Anatomy of a Task.*
 
-The book was published in 2018, when AI mainly acted as a prediction engine. In the agent era, another change has arrived: action is becoming cheap as well. Models do not merely predict. They write code, call APIs, deploy services, and execute entire workflows. Once both prediction and action become inexpensive, three things remain with humans: providing context, exercising judgment, and bearing the outcome.
+The book, published in 2018, makes a clean economic argument: AI lowers the cost of prediction, and when one thing becomes cheaper, its complements become more valuable. A prediction must be paired with “what I want” before it can become a decision. The cheaper prediction becomes, the more judgment matters.
 
-These three are not equivalent. People can actively develop context and judgment. Outcomes are different. AI can receive feedback about an outcome: a test passed, a user complained, a metric fell. But it cannot bear the consequence. A model has no personal stake, reputation, or irreversible loss. More deeply, outcomes often acquire meaning only inside a particular business context and value system. Whether a two-percent decline is a disaster or noise depends on an understanding of business cycles and user behavior that cannot be delegated as a neutral capability. Bearing the outcome is closer to an inalienable responsibility, the final anchor keeping people in the loop.
+The age of agents moves one step further. Models do not merely predict. They write code, call APIs, operate browsers, deploy services, and coordinate other agents in parallel. Action is becoming cheaper too.
 
-I prefer to expand the book's "data" into context. What is scarce is not isolated information but the business reality around it: user profiles, scenario constraints, resource limits, competitive movement, tacit organizational knowledge, and the history of mistakes within a project. A model's context window is finite and temporary; human context can accumulate across time. Context anchors judgment and makes value tradeoffs concrete.
+When both prediction and action are cheap, humans still occupy three roles that cannot easily be outsourced together:
 
-Judgment sits at the center of this framework. To me, it includes defining a problem from an intention, ordering conflicts, controlling complexity, setting boundaries, choosing a delivery form, evaluating evidence, and deciding whether a task is truly complete. Work often remains unsuitable for AI not because the model lacks capability, but because the person has not supplied enough context or has not recognized a form in which the problem can be productively shared with AI. Missing judgment is more common than missing capability.
+- Providing context: what reality does this problem live in?
+- Exercising judgment: which outcome is worth pursuing, and how should conflicts be ranked?
+- Bearing the outcome: if the decision is wrong, who loses time, money, reputation, or opportunity?
 
-Control is built on judgment. I divide it into understanding and intervention. Understanding means being able to explain the output as a whole, identify its key decisions, and verify and accept the evidence behind them. Intervention means being able to steer the model toward your expectations through verifiable and adjustable constraints rather than releasing an uncontrollable process. Control is not "I clicked accept." It means knowing what context you supplied, why you made a decision, and being willing to own the result.
+I prefer to expand the book’s “data” into “context.” Data can be retrieved. What remains scarce is the reality around it: why users behave this way, which mistakes the team has already made, where resource limits lie, which risks are acceptable, and which ordinary-looking metric could determine whether an entire business survives.
 
-Context, judgment, and outcomes sound like three moats. They are difficult to defend. Once prediction and action are outsourced, judgment and control can deteriorate for four reasons.
+A model can have a million-token context window and still not know what matters to you. It can receive signals such as “tests passed” or “revenue fell by 2%,” but it will not naturally know whether the latter is noise, seasonality, or an emergency that the company must address immediately.
 
-First, the role changes. Once AI takes over production, you stop being the person who does the work and become the person who reviews completed work. Evaluation requires more experience than execution and is easier to perform carelessly. You no longer experience the friction in the middle. You see only the final answer, and the training examples that once developed your judgment disappear with the process.
+This is not simply missing knowledge. The model does not occupy the position from which consequences are borne.
 
-Second, consequences are diluted. Judgment is trained by consequences: make the wrong choice, feel the cost, remember it, and adjust. Once execution is outsourced, you personally encounter fewer failures. You did not write the code, fall into the trap, or necessarily perform the repair. The model does not retain the lesson either. When neither side accumulates the experience, the lesson is lost.
+What humans cannot easily outsource, then, is not some mystical intelligence. It is a set of relationships: your relationship with the history of the problem, with the values involved in the tradeoff, and with responsibility for the outcome.
 
-Third, the loop becomes a black box. The most dangerous part of vibe coding is not speed but the illusion of control. You feel as if you are driving while sitting in the passenger seat saying "continue." When you stop reading diffs, tracking assumptions, and demanding evidence, AI output becomes a black-box production line. It may remain useful, but it no longer trains you.
+## Judgment Sets Direction; Control Keeps You in the Driver’s Seat
 
-Fourth, the environment that develops judgment is disappearing. Judgment used to grow through study, practice, and failure. That path is narrowing. Experts use AI to accelerate work they already understand; beginners use AI to perform work they do not yet understand. The difference is fundamental. Experts can judge what to trust and what to change. Beginners are more likely to accept everything and accumulate code that looks plausible but collapses under pressure.
+Two ideas that are often collapsed into one need to be separated: judgment and control.
 
-The problem, then, is not simply how capable AI is. It is that the loop between humans and AI is poorly designed.
+Judgment is not saying “right” or “wrong” after AI produces an answer. It begins earlier and reaches further. It means defining the real problem behind an intention, ranking conflicting goals, deciding how much complexity the system can justify, drawing boundaries that must not be crossed, choosing what evidence is sufficient to proceed, and deciding who has the authority to say, “This is actually done.”
 
-At the first Freestyle Chess World Championship in 2005, the winners were not grandmasters equipped with the strongest AI, but two American amateurs. Kasparov's summary was that a weak human plus a machine plus a better process could beat a strong human plus a machine plus a poor process. The difference came not from the strength of the AI but from the construction of the loop.
+Prediction answers, “What is likely to happen next?” Judgment answers, “What do we want to happen, and what are we willing to pay for it?” It does not merely score an answer. It assigns value to outcomes.
 
-That story is also being eroded by time. Pure AI later surpassed human-machine teams, while [loop engineering](https://addyosmani.com/blog/loop-engineering/) increasingly delegates judgment itself. The direction is clear: the human role is moving from adjudicator toward start button and fuse.
+Control is built on judgment, but it is not the same thing. You may know exactly what you want while being unable to understand what the agent did, redirect it when it drifts, or prove that it arrived. Judgment that never enters the system remains a wish.
 
-Until that day arrives, people remain in the loop. The question is what kind of loop allows AI to accelerate work while training rather than consuming human judgment and control.
+I now use three conditions to check whether I truly controlled an AI collaboration:
 
-Consider how models themselves improve. Pretraining learns distributions from enormous corpora and compresses knowledge into weights. During post-training, whether through RLHF or RLVR, a model acts under feedback and its policy is gradually shaped by rewards. Human learning has the same structure: capability equals prior knowledge plus feedback. Reading, studying examples, and learning from others establish priors; acting and bearing consequences update policy through the real world.
+- **Comprehensible:** I can explain the overall structure, key decisions, and supporting assumptions without leaning on the agent’s summary.
+- **Controllable:** I can encode preferences and boundaries into the workflow, then pause, reject, or redirect it at the load-bearing decision points.
+- **Verifiable:** I do not have to trust the model’s tone. I can confirm its claims through tests, logs, user behavior, or independent review.
 
-Humans have an advantage in sample efficiency. A model may need thousands of preference labels, while a person can update an intuition for good judgment after examining only a few decision processes in detail. If the loop is transparent, human judgment can become a self-accelerating flywheel.
+All three matter. Understanding without the ability to intervene makes you an alert passenger. Intervention without understanding is random steering. Verification supplied only by the agent that performed the work may simply allow one misunderstanding to certify itself.
+
+This is also where AI automation differs from traditional automation. When conventional machinery encounters an exception, it often sounds an alarm, stops, and explicitly hands control back to a human. Generative AI does not necessarily fail so visibly. It can continue working while wrong, producing stable, confident, well-structured output. Control is not lost at one obvious moment. It slips away quietly through a series of “continue” and “accept” clicks.
+
+So the feeling of control cannot come from “I prompted every step,” or “I clicked Accept at the end.” Real control means knowing what matters in this problem, seeing the decision points that determine direction, being able to change the system’s behavior at those points, and accepting responsibility for what happens after approval.
+
+Judgment determines where to go. Control keeps you capable of steering. Verification tells you whether you arrived. Responsibility keeps the whole exercise connected to reality.
+
+## Judgment Is Not a Stockpile
+
+It is tempting to call judgment the moat of the AI era. The metaphor is misleading because a moat is a stockpile: dig it, fill it, defend it, and assume it will remain there.
+
+Judgment does not work that way.
+
+In 1983, cognitive psychologist Lisanne Bainbridge described the “ironies of automation.” The more advanced automation becomes, the fewer situations remain for a human operator—but those situations are also more difficult. High-level skill, meanwhile, depends on frequent practice. Once automation takes over routine work, the operator becomes a monitor and may be least prepared at the exact moment intervention matters most.
+
+AI extends this paradox from operational skill to judgment itself.
+
+In the past, an engineer personally encountered misunderstood requirements, uncertain designs, failed implementations, and repairs. Every point of friction trained intuition. Once an agent takes over execution, that middle disappears and the person sees only the packaged result. Four things follow:
+
+1. The person moves from producer to reviewer, even though evaluation often requires more experience than execution.
+2. The consequences of error are diluted. You did not fall into the hole, and you may not participate in climbing out.
+3. The process becomes a black box. A fluent summary creates a feeling of control without creating understanding.
+4. Beginners use AI to complete work they do not yet understand, losing the practice through which judgment would otherwise develop.
+
+The most dangerous state is not that AI occasionally makes mistakes. It is that AI continually produces things that look sufficiently correct while humans gradually lose the ability to detect what is wrong.
+
+Judgment is therefore not a river to defend. It is a capacity that must remain metabolically active. Context expires when it is not refreshed. Rules become rigid when they are not recalibrated. Experience that is never reviewed decays into intuition that cannot explain itself.
+
+What we can manage is not a fixed stock of judgment, but the rate at which judgment regenerates.
+
+That is the water source.
+
+## Humans Should Not Stay in Every Step, but at the Load-Bearing Points
+
+It is easy to overcorrect. If judgment requires practice, perhaps humans should read every line of code, inspect every tool call, and approve every action.
+
+That does not work either.
+
+When several agents work in parallel, human attention immediately becomes the single bottleneck. If every agent must wait for a person to clarify requirements, review implementation, and approve the next move, parallelism merely turns one queue into several simultaneous queues. Being trapped in every detail does not create high-quality feedback. More often, it creates a tired person stamping more approvals.
+
+A healthy exit does not mean leaving the loop or remaining in every step. It means moving the person to the points that actually carry judgment:
+
+- Confirm the problem and boundaries before implementation instead of continuously adding requirements during it.
+- Review the test plan and success criteria instead of assuming every implementation needs line-by-line review.
+- Compare several genuinely viable routes instead of approving the only option presented.
+- Adjudicate conflicting evidence and architectural tradeoffs instead of doing mechanical checks for the agent.
+- Rebuild an understanding of the system after delivery instead of reading only a “completed” summary.
+
+Routine execution can be delegated to the model. Value judgments should not be delegated along with it by accident.
+
+This also explains why stronger models often benefit from leaner prompts. The goal, real-world context, non-negotiable boundaries, and evidence of completion should be explicit. Implementation details the model can competently decide do not need to be frozen in advance. Excessive prescription constrains the model and gives the person a false belief that writing more instructions means controlling the process.
+
+Control is not the number of instructions you wrote. It is whether you can change direction at the moments that matter—and explain why.
+
+## A Healthy Loop Must Produce Two Outputs
+
+I now use a simpler question to evaluate an AI workflow: what did it deliver when it ended?
+
+If it delivered only code, documents, charts, or conclusions, the loop increased production but may have consumed the person operating it.
+
+If it also left behind inspectable decisions, failed assumptions, a deeper model of the system, and rules that will change future behavior, then the loop trained both the person and the system.
+
+The first output is the work product. The second is judgment infrastructure.
+
+Most teams optimize only the first: finish faster, run more agents in parallel, require less human labor. Sustainable advantage comes from the second: after every task, there are fewer unknowns, better tests, more accurate rules, and participants who understand the problem more deeply.
+
+The water source of judgment is the conversion of every cheap unit of AI execution into a high-density human learning sample.
+
+## The Water Cycle of Judgment
+
+Models learn from priors and feedback. Human learning is not fundamentally different: reading, examples, and other people’s experience establish priors; action, outcomes, and reflection update strategy.
+
+Humans have an advantage in sample efficiency. A model may need large amounts of preference data. A person who carefully examines a few important decisions may update their intuition about what “good” looks like. The problem is that most AI workflows compress the decision process into a smooth summary and discard the most valuable training samples.
+
+What I want to preserve is the following water cycle.
 
 ![Judgment water flywheel: probe blind spots, generate options, stress judgment, inspect evidence, explain, codify rules, and compound judgment {lg}](../images/judgment-water-flywheel.png)
 
-The most important parts of this diagram are not AI execution but what happens before and after it: discovering unknowns, generating alternatives, stress-testing judgment, adjudicating evidence, absorbing explanations, and codifying rules. They look like workflow stages, but their real purpose is to increase feedback density. Stronger judgment lets you recognize better output. More precise constraints improve model behavior. More nuanced model proposals give you richer material to interrogate. Judgment continues to compound.
+### 1. Make the Map Touch the Territory
 
-I eventually realized that such a loop cannot depend on promising to "pay more attention next time." It needs stable actions: probe for blind spots before implementation, generate meaningfully different options, challenge decisions through reverse questioning, make the evidence explicit, and produce a structured walkthrough after delivery. These are not rituals added to a workflow. They protect the flow in the diagram so that every collaboration with AI leaves behind a small increase in judgment.
+Prompts, plans, and existing knowledge are maps. The codebase, user behavior, and real constraints are the territory. The gap between them is the unknown.
 
-The flywheel sounds attractive, but it has two prerequisites.
+Before execution begins, tell the model where you stand: how familiar you are with the problem, which facts are confirmed, which are guesses, and which outcomes are unacceptable. Then ask it to scan for blind spots rather than immediately agree with your first plan.
 
-First, the human must genuinely interrogate rather than become domesticated by the model's explanation. Models are skilled at making an answer sound like the answer. The better they explain, the easier it becomes to confuse fluency with understanding. The loop therefore needs adversarial pressure and falsification: someone must interrupt the smooth narrative and ask where the evidence, boundaries, and alternative explanations are.
+Unknowns can be divided roughly into four kinds:
 
-Second, the flywheel cannot be a black box. Loop engineering changes the human role from writing each prompt to designing the cycle. A system can discover work, assign it, invoke agents, inspect results, record state, and decide what happens next.
-
-![LangChain, The Art of Loop Engineering: an agent event loop around state, tools, memory, and messages {lg}](../images/langchain-loop-engineering-event-loop.png)
-
-_Source: LangChain, [The Art of Loop Engineering](https://www.langchain.com/blog/the-art-of-loop-engineering)._
-
-A loop that runs is not necessarily a healthy loop. The engineering object may no longer be code or even prompts, but the loop must remain comprehensible, controllable, and verifiable. I abbreviate these requirements as CCV.
-
-Comprehensible means an output must be digestible, not merely correct. You should be able to explain why it took a path, which critical parts changed, and which assumptions support the solution. Controllable means preferences and boundaries can be encoded as rules rather than recreated from intuition every time. Verifiable means trusting evidence instead of the model's tone.
-
-In practice, these principles become five actions.
-
-First, write tests for judgment.
-
-A rule converts a vague intuition into an executable assertion. Whenever an agent output feels wrong, do not ignore the feeling. Ask what is wrong, whether it can be intercepted, and how. Write the answer as a rule. The rule becomes a unit test for judgment.
-
-If the rule blocks similar failures, your judgment has been encoded successfully. If it permits something that should have been stopped, the judgment has a bug and the rule needs revision. Rules that are never executed are useless. Only when a rule enters the repository does taste acquire version history. The system may capture improvement signals, but constitutional authority must remain human.
-
-Second, train judgment through adjudication.
-
-Judgment sometimes deteriorates not because people refuse to practice, but because they lack enough opportunities to decide. In organizations, meaningful decision rights often arrive only after promotion. AI execution can open that bottleneck. An agent can continuously produce proposals, diffs, tests, logs, and failures. The density of judgment rises: should this architecture pass? Is a review finding real or a false positive? Is the evidence sufficient to ship? Is this tradeoff a local optimum or long-term debt?
-
-Adjudication becomes valuable when it closes a feedback loop. If a decision proves wrong, the record can identify which judgment failed and calibrate the standard. In a one-person team, agents are a tireless production line and you are the only quality inspector. If decisions are recorded, consequential, and reviewed, dense feedback will train judgment.
-
-Third, actively discover your unknowns.
-
-One hidden cause of declining judgment is not knowing what you do not know. The problem space can be divided into known knowns, known unknowns, unknown knowns, and unknown unknowns.
+- Known knowns: goals and facts you can already articulate.
+- Known unknowns: questions you know remain unresolved.
+- Unknown knowns: preferences you cannot state in advance but can recognize when you see a good or bad option.
+- Unknown unknowns: questions you do not know to ask and possibilities you do not know exist.
 
 ![Unknown matrix: probe blind spots into known unknowns, research gaps into known knowns, and prototype tacit knowledge into judgment {md}](../images/unknown-matrix.png)
 
-The best agent operators are often distinguished not by elaborate prompts but by having fewer unknowns. They remain deeply synchronized with the codebase, problem domain, and model behavior. They also refuse to assume they have no blind spots. Reducing unknowns and planning for those that remain is itself a form of judgment training.
+Blind-spot probes, research, interviews, references, and prototypes are not there to let AI make your judgments. They give you the objects you need in order to judge earlier.
 
-The practice is simple. Before implementation, ask the model to scan for blind spots after explaining your experience, domain familiarity, and known constraints. Then use prototypes and brainstorming to expose unknown knowns: preferences you cannot articulate but recognize immediately when shown the wrong version. Finally, have the model interview you about questions whose answers would change the architecture. Every constraint made explicit is an incremental commit to judgment.
+Every unknown discovered in advance is a cheap failure that happened early.
 
-Fourth, understanding is a prerequisite for participation, not merely a verification technique.
+### 2. Generate Options That Are Actually Different
 
-People often reduce understanding an agent's output to checking whether it is correct, like a thumbs-up or thumbs-down. But understanding matters primarily because it enables participation. A project is not one loop but countless loops with a model. The depth of your system understanding determines which next steps you can imagine. Without a rich conceptual model, you cannot reason fluently about how the system should evolve.
+If the model offers only one plan, people easily mistake “the first complete answer” for “the correct answer.” Judgment needs objects to compare.
 
-This is why reading a diff line by line is not the only path and may not be the best one. I now ask agents to generate structured walkthroughs after delivery: establish the necessary background, explain the intuition of the change, and arrange the code in logical rather than filename order. I also ask for a quiz at the end. The rule is simple: if I cannot pass the quiz, I do not merge the code.
+Ask for several routes that differ in mechanism, not merely presentation. For each route, identify what it optimizes, what it sacrifices, and under which conditions it fails. If you cannot articulate your preference, stop adding adjectives and build prototypes so you can react to concrete artifacts.
 
-The quiz acts as a governor on the loop. When AI execution moves much faster than human understanding, a mechanical checkpoint must ask: do I genuinely understand this? That is not bureaucracy. It prevents a creative participant from becoming a rubber stamp.
+High-quality references are often more valuable than lists of attributes. Mature source code, a complete product, or a precise professional pattern can embody relationships you cannot enumerate. A reference is not there to be copied at the surface. It exposes the relationships, rhythm, and boundaries you actually care about.
 
-Fifth, record adjudication and make lessons explicit.
+The point of divergence is not to own more options. It is to force hidden standards of judgment into the open.
 
-Diluted consequences are a central cause of judgment decay. The response is to record deviations explicitly: which edge cases appeared, which assumptions failed, where execution diverged from the plan, and why a review finding was accepted or rejected. The failures you would once have encountered personally become readable decision samples.
+### 3. Turn Preferences into Testable Commitments
 
-After a session, revisit those deviations. Decide which were your blind spots, which came from planning gaps, and which require a new rule. This uses cheap samples for expensive learning. A model can explore more paths on your behalf, but unless you preserve the branches and failures, they never become your experience.
+When choosing a route, do not record only “we chose A.” Record why A won, what was sacrificed, which assumptions support it, and what new evidence would make you switch to B.
 
-It is fashionable to call taste and judgment moats in the AI era. I increasingly think the metaphor is wrong.
+Then translate the judgment into tests, acceptance criteria, and risk boundaries.
 
-A moat is a stock: dig it, fill it, and defend it. Judgment does not work that way. Judgment deteriorates without practice. Context expires without updates. Rules become rigid without calibration. Experience becomes intuition without reflection.
+This step matters because taste enters a feedback loop only after it becomes an assertion that can fail. Otherwise, success appears self-evident and failure reveals nothing about which judgment was wrong.
 
-What can be cultivated is not a static capability but the rate at which capability is generated. That is the water source. It does not live in one person's mind or one prompt. It lives in a loop that continuously connects context, action, evidence, adjudication, and reflection.
+Tests can evaluate judgment, not just code:
 
-For me, then, this loop is not a collection of techniques for making AI do more work. It is a way to keep people at the center of collaboration. Probing is not asking AI to think for me, but preventing me from starting with blind spots. Generating alternatives is not collecting options, but exposing tacit preferences. Interrogation is not performative rigor, but resistance to smooth narratives. Explanations and walkthroughs are not packaging after delivery, but the means by which I regain the ability to participate in the next decision.
+- Did this design actually reduce the number of user steps?
+- Did this abstraction reduce complexity for its callers?
+- Does this review rule catch another instance of the same defect?
+- Is this evidence sufficient to support release, rather than merely sufficient to show that the system appears to run?
 
-Loops also have a shelf life. A loop is text; if it can be written, it can be copied. Stronger models need less scaffolding, making similar loops easier for everyone to obtain. Once the loops converge, the remaining difference is what they produced: a person trained by years inside the loop cannot be copied. The loop becomes easier to imitate while the person becomes harder to catch.
+### 4. Make Execution Autonomous and Verification Independent
 
-The durable advantage is therefore not merely a human in the loop, but an expert in the loop.
+Once boundaries and acceptance criteria are set, the model should have enough tools to execute end to end: read code, run services, operate a browser, inspect logs, debug, and fix. A person does not need to watch it type.
 
-What if models eventually absorb expert judgment as well? I have no answer, only a direction. In economics, judgment assigns value to outcomes. What you want can only be stated by you. That layer cannot be outsourced because it is not a capability but a position.
+But the executor should not monopolize the interpretation of its own work. If the same agent interprets the requirement, designs the tests, implements the change, and declares success, one misunderstanding can contaminate the entire chain.
 
-Who owns the problem and who bears responsibility for the result may prove more durable than who knows how to solve it. Solutions depreciate; problems do not. If that day arrives, the moat may lie not in any capability but in your relationship to the problem. Until then, build the loop and train yourself into its expert.
+A more reliable approach introduces independent verification. An agent with fresh context receives only the requirements, test plan, and results, then looks for failures. At high-risk points, a person adjudicates the business boundary or architectural tradeoff. The verifier’s job is not to retell the plan. It is to find evidence that could overturn it.
+
+Progress and completion claims must also rest on evidence produced by tools. If a test failed, say it failed. If a step was skipped, say it was skipped. If something was not verified, do not describe it in the completed tense. Verifiability does not mean the model sounds certain. It means every load-bearing claim points back to a real result.
+
+### 5. Re-enter the System Through Explanation
+
+Understanding is not decoration after delivery, nor merely a way to check correctness. Understanding determines whether you can participate in the next round of design.
+
+Reading every line of a diff is not the only way to understand. After long-running agent work, I want a walkthrough organized by logic: first provide the necessary background, then explain the key decisions and system changes, and finally identify the remaining assumptions and risks. File paths are an index. What must be restored is the conceptual model of the system.
+
+I also like to end with a quiz. The rule is simple: if I cannot answer the important questions in my own words, I am not yet qualified to merge.
+
+The quiz is a governor between execution speed and understanding speed. It is not proof that I memorized details. It checks whether I can still imagine how the system should evolve next.
+
+### 6. Turn One Adjudication into Future Behavior
+
+Finally, record what is actually worth keeping from this round: which assumption failed, where execution diverged from the plan, why a review finding was valid or a false positive, and which method proved effective.
+
+Judgments that can reliably prevent the same class of error should become a rule, a test, or a Skill. Facts already present in code and documentation should not be duplicated. Lessons later shown to be wrong should be deleted. Rules that become rigid should be recalibrated.
+
+Compounding is not the accumulation of more text. It means causing the next action to change in an observable way.
+
+If the same error keeps appearing, the rule never entered the real workflow. If the rule begins blocking changes that are actually reasonable, the judgment itself needs revision.
+
+Taste gains a version history only after a rule enters the repository.
+
+## How to Tell Whether a Loop Is Healthy
+
+[Loop Engineering](https://addyosmani.com/blog/loop-engineering/) expands the object of engineering from an individual prompt to the entire cycle: the system discovers tasks, assigns work, invokes agents, records state, checks results, and decides what to do next.
+
+![LangChain, The Art of Loop Engineering: an agent event loop around state, tools, memory, and messages {lg}](../images/langchain-loop-engineering-event-loop.png)
+
+*Source: LangChain, [The Art of Loop Engineering](https://www.langchain.com/blog/the-art-of-loop-engineering).*
+
+But a loop that runs autonomously is not necessarily healthy. The same three conditions used earlier to ask whether a person retains control also apply to the workflow as a whole: is it comprehensible, controllable, and verifiable? I abbreviate them as CCV. If decisions are hidden inside a black box, boundaries cannot change when new evidence appears, and completion claims lack independent evidence, then the faster the loop runs, the faster the person loses control.
+
+One longer-term question remains: did this loop change the next loop?
+
+If it left behind no new test, rule, understanding, or more accurate definition of the problem, it may have been efficient outsourcing and nothing more. Efficient outsourcing is valuable. It should not be mistaken for capability accumulation.
+
+## Parallel Agents Increase Judgment Density, Not Free Time
+
+Once one agent can complete work autonomously, the natural next step is to run several at once. Execution throughput rises, and the human role changes with it. Instead of writing every line of code, the person continually judges whether a requirement is correct, whether a test plan is complete, how several implementations compare, and which discovery deserves escalation.
+
+This does not automatically make work easier. It transforms a mixture of thinking and doing into concentrated thinking. Three agents producing results at once can saturate one person’s attention very quickly.
+
+Scaling therefore cannot optimize only for agent concurrency. It must optimize the entry points for judgment:
+
+- Align on requirements serially, then parallelize execution.
+- Give independent tasks to different agents, but centralize final semantic judgment.
+- Batch low-value results instead of allowing every message to interrupt immediately.
+- Escalate only matters that genuinely require a value tradeoff.
+- Match review intensity to risk instead of treating every artifact equally.
+
+The metrics for a parallel system should not be limited to the number of tasks completed. They should include how often each agent interrupts a human before finishing, how many completion claims are backed by evidence, how many errors become reusable rules, and whether the person still understands the system at the end.
+
+High throughput is not high leverage. Scale is sustainable only when output and judgment grow together.
+
+## The Loop Can Be Copied. The Person Trained by It Cannot.
+
+Every workflow eventually becomes text, Skills, tools, and code. Anything that can be written down can be copied. As models become stronger, they need less scaffolding. An agent loop that is scarce today may become a default capability tomorrow.
+
+The loop itself is not a permanent moat either.
+
+What continues to differentiate people is what the loop produces inside its participants. After years of high-density blind-spot discovery, option comparison, evidence adjudication, and consequence review, a person develops a better sense of problems, faster pattern recognition, and more accurate tradeoffs. Others can copy the rules, but they cannot instantly copy the training history behind them.
+
+The loop will become easier to copy. The person will become harder to catch.
+
+The durable advantage is therefore not merely a human in the loop, but an expert in the loop—or more precisely, a person who continually trains themselves into an expert while remaining inside a loop that does not take away understanding or responsibility.
+
+What if models eventually absorb expert judgment as well? I do not have a definitive answer, but one direction seems increasingly clear: solutions will continue to depreciate; problems will not.
+
+At its deepest level, judgment is not “how should this be solved?” but “what is worth solving, and which outcome is worth accepting responsibility for?” That is not just a capability. It is a position. Whoever owns the problem, represents the values in the tradeoff, and bears the consequences ultimately has the authority to say, “This is done.”
+
+Perhaps the most durable advantage will not lie in any skill, but in your relationship with the problem.
+
+Until then, build the loop—but do not let it produce only more things.
+
+Let it keep producing a more discerning version of you as well.
