@@ -4,13 +4,29 @@ import { getSortedPosts } from "./getSortedPosts";
 import { postFilter } from "./postFilter";
 import { isPostInLocale } from "./postLocale";
 
-export async function getPostPageProps(locale: string) {
-  const posts = (await getCollection("posts")).filter(post =>
-    isPostInLocale(post, locale)
+export async function getPostPageProps(
+  locale: string,
+  options: { includeHiddenSeries?: boolean } = {}
+) {
+  const posts = (await getCollection("posts")).filter(
+    post =>
+      isPostInLocale(post, locale) ||
+      (options.includeHiddenSeries &&
+        post.data.hidden &&
+        Boolean(post.data.series) &&
+        isPostInLocale(post, "zh"))
   );
   const visiblePosts = getSortedPosts(posts);
 
-  return posts.filter(postFilter).map(post => {
+  return posts
+    .filter(
+      post =>
+        postFilter(post) ||
+        (options.includeHiddenSeries === true &&
+          post.data.hidden &&
+          Boolean(post.data.series))
+    )
+    .map(post => {
     const index = visiblePosts.findIndex(({ id }) => id === post.id);
 
     return {
@@ -35,5 +51,5 @@ export async function getPostPageProps(locale: string) {
             : null,
       },
     };
-  });
+    });
 }

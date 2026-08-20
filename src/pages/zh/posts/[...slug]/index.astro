@@ -3,7 +3,7 @@ import PostPage from "../../../posts/[...slug]/index.astro";
 import { getPostPageProps } from "@/utils/getPostPageProps";
 
 export async function getStaticPaths() {
-  return getPostPageProps("zh-CN");
+  return getPostPageProps("zh-CN", { includeHiddenSeries: true });
 }
 ---
 
