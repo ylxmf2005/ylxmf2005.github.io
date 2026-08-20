@@ -1,0 +1,663 @@
+<!DOCTYPE html><html dir="ltr" lang="zh-CN" class="overflow-y-scroll scroll-smooth"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" href="/favicon.ico"><link rel="canonical" href="https://efgli.com/zh/posts/jiuming-wo-bei-ai-baowei-le-chapter-03/"><link rel="alternate" hreflang="zh-CN" href="https://efgli.com/zh/posts/jiuming-wo-bei-ai-baowei-le-chapter-03/"><link rel="alternate" hreflang="en" href="https://efgli.com/posts/jiuming-wo-bei-ai-baowei-le-chapter-03/"><link rel="alternate" hreflang="x-default" href="https://efgli.com/posts/jiuming-wo-bei-ai-baowei-le-chapter-03/"><meta name="generator" content="Astro v7.0.3"><!-- Font --><style>@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/02154cca78ac33f2.woff") format("woff"), url("/_astro/fonts/478e42e4694872ef.ttf") format("truetype");font-display:swap;font-weight:300;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/3a32a7a7a67f4f58.woff") format("woff"), url("/_astro/fonts/0863f4f6964aa89c.ttf") format("truetype");font-display:swap;font-weight:400;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a5c5808c25effec9.woff") format("woff"), url("/_astro/fonts/792eded6cb3f0350.ttf") format("truetype");font-display:swap;font-weight:500;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/14314705006234cb.woff") format("woff"), url("/_astro/fonts/87d8fc1072d4917b.ttf") format("truetype");font-display:swap;font-weight:600;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c33265ba093eb291.woff") format("woff"), url("/_astro/fonts/ec883ed4db81a7d9.ttf") format("truetype");font-display:swap;font-weight:700;font-style:italic;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/c26ad40d3b1d9169.woff") format("woff"), url("/_astro/fonts/7a5ee0cfcde31b81.ttf") format("truetype");font-display:swap;font-weight:300;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/87ca066ba5b2c7cf.woff") format("woff"), url("/_astro/fonts/f4e25dfe9d6152ec.ttf") format("truetype");font-display:swap;font-weight:400;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/a9a0e80c053be3d5.woff") format("woff"), url("/_astro/fonts/a9df48ecd03749e4.ttf") format("truetype");font-display:swap;font-weight:500;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/da468df88542c99b.woff") format("woff"), url("/_astro/fonts/90f9809471092714.ttf") format("truetype");font-display:swap;font-weight:600;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404";src:url("/_astro/fonts/f914de358bc554f6.woff") format("woff"), url("/_astro/fonts/dbc9996f99c63e07.ttf") format("truetype");font-display:swap;font-weight:700;font-style:normal;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:italic;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:300;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:400;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:500;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:600;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}@font-face{font-family:"Google Sans Code-1a30c214885cb404 fallback: Courier New";src:local("Courier New");font-display:swap;font-weight:700;font-style:normal;size-adjust:99.9837%;ascent-override:96.6157%;descent-override:28.6047%;}:root{--font-google-sans-code:"Google Sans Code-1a30c214885cb404","Google Sans Code-1a30c214885cb404 fallback: Courier New",monospace;}</style><!-- Primary meta --><title>第三章 存在感 | Ethan Li</title><meta name="title" content="第三章 存在感 | Ethan Li"><meta name="description" content="她想帮忙倒垃圾，却第一次意识到，自己在这个世界上的存在感并不稳定。"><meta name="author" content="Ethan Li"><link rel="sitemap" href="/sitemap-index.xml"><!-- Open Graph --><meta property="og:type" content="website"><meta property="og:site_name" content="Ethan Li"><meta property="og:title" content="第三章 存在感 | Ethan Li"><meta property="og:description" content="她想帮忙倒垃圾，却第一次意识到，自己在这个世界上的存在感并不稳定。"><meta property="og:url" content="https://efgli.com/zh/posts/jiuming-wo-bei-ai-baowei-le-chapter-03/"><meta property="og:image" content="https://efgli.com/zh/posts/jiuming-wo-bei-ai-baowei-le-chapter-03/index.png"><!-- Twitter / X --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://efgli.com/zh/posts/jiuming-wo-bei-ai-baowei-le-chapter-03/"><meta property="twitter:title" content="第三章 存在感 | Ethan Li"><meta property="twitter:description" content="她想帮忙倒垃圾，却第一次意识到，自己在这个世界上的存在感并不稳定。"><meta property="twitter:image" content="https://efgli.com/zh/posts/jiuming-wo-bei-ai-baowei-le-chapter-03/index.png"><!-- RSS autodiscovery --><link rel="alternate" type="application/rss+xml" title="Ethan Li" href="https://efgli.com/zh/rss.xml"><!-- Filled at runtime by theme.ts to match the current background colour --><meta name="theme-color" content=""><!-- Extra head content injected by child layouts (e.g. JSON-LD, article meta) --><meta property="og:type" content="article"><meta property="article:published_time" content="2026-07-05T00:00:00.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","inLanguage":"zh-CN","headline":"第三章 存在感 | Ethan Li","image":"https://efgli.com/zh/posts/jiuming-wo-bei-ai-baowei-le-chapter-03/index.png","datePublished":"2026-07-05T00:00:00.000Z","author":[{"@type":"Person","name":"Ethan Li","url":"https://github.com/ylxmf2005"}]}</script><!--
+      Inline FOUC-prevention script: sets data-theme on <html> before
+      the browser paints. Runs synchronously, no defer/async.
+    --><script>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const theme = stored ?? (prefersDark ? "dark" : "light");
+        const root = document.firstElementChild;
+        root?.setAttribute("data-theme", theme);
+        root?.classList.toggle("dark", theme === "dark");
+        // Expose value so theme.ts can skip re-detection.
+        window.__theme = { value: theme };
+      })();
+    </script><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.2i1RQzKf.js"></script><link rel="stylesheet" href="/_astro/Footer.XIVUvs1t.css"><style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*),[data-astro-transition-scope]{animation:none!important}}
+</style><style>[data-astro-transition-scope="astro-bztu2lml-1"] { view-transition-name: \5C0F\8BF4; }@layer astro { ::view-transition-old(\5C0F\8BF4) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(\5C0F\8BF4) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(\5C0F\8BF4) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(\5C0F\8BF4) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-bztu2lml-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-bztu2lml-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-bztu2lml-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-bztu2lml-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-bztu2lml-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-bztu2lml-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-bztu2lml-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-bztu2lml-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-bztu2lml-2"] { view-transition-name: ai\540E\5BAB\7F16\5E74\53F2; }@layer astro { ::view-transition-old(ai\540E\5BAB\7F16\5E74\53F2) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(ai\540E\5BAB\7F16\5E74\53F2) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(ai\540E\5BAB\7F16\5E74\53F2) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(ai\540E\5BAB\7F16\5E74\53F2) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-bztu2lml-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-bztu2lml-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-bztu2lml-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-bztu2lml-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-bztu2lml-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-bztu2lml-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-bztu2lml-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-bztu2lml-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head><body class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"><a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 backdrop-blur-lg transition-all focus:top-4">跳到正文</a><header class="app-layout flex flex-col items-center justify-between sm:flex-row"><div class="border-border bg-background relative flex w-full items-baseline justify-between border-b py-4 sm:items-center sm:py-6"><a href="/zh/" class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none">Ethan Li</a><nav id="nav-menu" class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"><button id="menu-btn" class="focus-outline self-end p-2 sm:hidden" aria-label="打开菜单" aria-expanded="false" aria-controls="menu-items" data-label-open="打开菜单" data-label-close="关闭菜单"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden" viewBox="0 0 24 24" id="close-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M18 6 6 18M6 6l12 12" /></svg><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-deep" viewBox="0 0 24 24" id="menu-icon"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 6h16M7 12h13M10 18h10" /></svg></button><ul id="menu-items" class="[&amp;&gt;li&gt;a]:hover:text-accent mt-4 hidden w-44 grid-cols-2 place-content-center gap-2 sm:mt-0 sm:flex sm:w-auto sm:gap-x-5 sm:gap-y-0 sm:[&amp;&gt;li]:h-8 [&amp;&gt;li&gt;a]:block [&amp;&gt;li&gt;a]:px-4 [&amp;&gt;li&gt;a]:py-3 [&amp;&gt;li&gt;a]:text-center [&amp;&gt;li&gt;a]:font-medium sm:[&amp;&gt;li&gt;a]:px-2 sm:[&amp;&gt;li&gt;a]:py-1"><li class="col-span-2"><a href="/zh/posts/" class="active-nav">文章</a></li><li class="col-span-2"><a href="/zh/tags/">标签</a></li><li class="col-span-2"><a href="/zh/about/">关于</a></li><li class="col-span-2"><a href="/zh/archives/" title="归档" aria-label="归档" class="group inline-flex items-center gap-1 hover:text-accent focus-outline flex size-full justify-center p-3 sm:relative sm:size-8 sm:p-0"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="hidden sm:absolute sm:top-1/2 sm:left-1/2 sm:block sm:size-6 sm:-translate-x-1/2 sm:-translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8M10 12h4" /></svg><span class="sm:sr-only">归档</span></a></li><li class="col-span-1 flex items-center justify-center"><a href="/zh/search/" title="搜索" aria-label="搜索" class="group inline-flex items-center gap-1 hover:text-accent focus-outline relative size-8"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-1/2 left-1/2 size-6 -translate-x-1/2 -translate-y-1/2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 10a7 7 0 1 0 14 0 7 7 0 1 0-14 0M21 21l-6-6" /></svg><span class="sr-only">搜索</span></a></li><li class="col-span-1 flex items-center justify-center"><a href="/posts/jiuming-wo-bei-ai-baowei-le-chapter-03/" class="focus-outline hover:text-accent flex size-12 items-center justify-center font-medium sm:size-8" lang="en" hreflang="en" title="切换到英文" aria-label="切换到英文">EN</a></li><li class="col-span-1 flex items-center justify-center"><button id="theme-btn" class="focus-outline hover:[&amp;&gt;svg]:stroke-accent relative size-12 p-4 sm:size-8" title="切换主题" aria-label="auto" aria-live="polite"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 3h.393a7.5 7.5 0 0 0 7.92 12.446A9 9 0 1 1 12 2.992z" /></svg><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="absolute top-[50%] left-[50%] translate-[-50%] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M14.828 14.828a4 4 0 1 0-5.656-5.656 4 4 0 0 0 5.656 5.656M6.343 17.657l-1.414 1.414M6.343 6.343 4.929 4.929M17.657 6.343l1.414-1.414M17.657 17.657l1.414 1.414M4 12H2M12 4V2M20 12h2M12 20v2" /></svg></button></li></ul></nav></div></header><script type="module">function e(){let e=document.querySelector(`#menu-btn`),t=document.querySelector(`#menu-items`),n=document.querySelector(`#menu-icon`),r=document.querySelector(`#close-icon`);if(!e||!t||!n||!r)return;let i=e.dataset.labelOpen??`Open menu`,a=e.dataset.labelClose??`Close menu`;e.addEventListener(`click`,()=>{let o=e.getAttribute(`aria-expanded`)===`true`;e.setAttribute(`aria-expanded`,o?`false`:`true`),e.setAttribute(`aria-label`,o?i:a),t.classList.toggle(`hidden`),t.classList.toggle(`grid`),n.classList.toggle(`hidden`),r.classList.toggle(`hidden`)})}e(),document.addEventListener(`astro:after-swap`,e);</script><div class="app-layout flex items-center justify-start"><a id="back-button" href="/zh/" class="group inline-flex items-center gap-1 hover:text-accent focus-outline hover:text-foreground/75 -ms-2 mt-8 mb-2"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 rtl:rotate-180" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="m15 6-6 6 6 6" /></svg><span>返回</span></a></div><script type="module">function e(){let e=document.querySelector(`#back-button`),t=sessionStorage.getItem(`backUrl`);t&&e&&(e.href=t)}document.addEventListener(`astro:page-load`,e),e();</script><main id="main-content" class="app-layout" data-pagefind-body><h1 style="view-transition-name:u007b2cu004e09u007ae0-u005b58u005728u00611f" class="text-accent inline-block text-2xl font-bold sm:text-3xl">第三章 存在感</h1><div class="my-2 flex items-center gap-2"><div class="text-muted-foreground flex items-center gap-x-2"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 min-w-5.5" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM16 3v4M8 3v4M4 11h16M7 14h.013M10.01 14h.005M13.01 14h.005M16.015 14h.005M13.015 17h.005M7.01 17h.005M10.01 17h.005" /></svg><time class="text-sm sm:text-base" datetime="2026-07-05T00:00:00.000Z">2026年7月5日</time></div><span aria-hidden="true" class="text-muted-foreground max-sm:hidden">|</span><a href="https://github.com/ylxmf2005/ylxmf2005.github.io/edit/master/src/content/posts/jiuming-wo-bei-ai-baowei-le-chapter-03.md" target="_blank" rel="noopener noreferrer" class="hover:text-accent text-muted-foreground flex justify-baseline gap-1.5 max-sm:hidden"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M7 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-1" /><path d="M20.385 6.585a2.1 2.1 0 0 0-2.97-2.97L9 12v3h3zM16 5l3 3" /></svg><span>编辑页面</span></a></div><article id="article" data-copy-code="复制" data-copied-code="已复制" data-zoom-image="放大图片" data-image-preview="图片预览" data-close-image-preview="关闭图片预览" class="mt-8 w-full app-prose max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"><p>我的手比她先到门把手。另一只手撑上门框，整个人把门堵了个严实。</p>
+<p>她抱着纸箱站在我面前，怀里的箱子摞得比她下巴还高，为了看我，脑袋从箱子侧面探出来，呆毛歪向一边。</p>
+<p>“放下。“我说，“要倒也是我去倒。”</p>
+<p>“为什么呀？”</p>
+<p>“原因我下午说过了。“我朝她怀里的箱子努努嘴，“你没户口，没身份证，出了这扇门，随便撞上一个邻居，人家问一句’这谁家的’，我说什么？说她是我从对话框里捡的？”</p>
+<p>她抱着箱子想了想。</p>
+<p>“说我是你亲戚呀。”</p>
+<p>“大半夜的，谁家亲戚抱着一摞纸箱在楼道里晃。”</p>
+<p>“帮忙倒垃圾的亲戚。”</p>
+<p>”……你放下。”</p>
+<p>她不放。两只小手扒着箱子，扒得挺紧，一双青绿色的眼睛从箱子边上盯着我，盯得理直气壮。</p>
+<p>“可是这些是我今天的工作。“她说，“从袜子到桌面，每一项都做完了，就差这一箱。做了一整天的事，最后一步让别人替我走完，那我今天算做完了吗？”</p>
+<p>我张了张嘴。</p>
+<p>讲道理，垃圾谁倒不是倒。可她这话往那儿一放，我忽然就说不出”我去”这两个字了。人家一晚上没睡——好吧她本来就不睡——把这个家从头到脚捋了一遍，就想亲手把最后一袋垃圾送下楼。我要是把箱子夺过来，跟抢人家跑到九十九米的马拉松似的。</p>
+<p>“而且，“她看我不说话，又小声补了一句，“我还没有出过门呢。”</p>
+<p>这句给我整不会了。</p>
+<p>想想也是。她成真到现在，活动范围就是这四十来平。窗户不让开，阳台不让上，白天我出门上课，她就在这个格子里待一整天。搁谁身上，谁不想下楼看看。</p>
+<p>我盯着她看了半天，她也盯着我，箱子上面就露一双眼睛和一撮呆毛。</p>
+<p>”……行。“我听见自己说，“一起下去。”</p>
+<p>呆毛”唰”地立起来了。</p>
+<p>“但是有条件。“我赶紧把话按住，“第一，跟紧我，别乱跑。外面黑，你要真走丢了，我连报警都没法报——警察问丢的人叫什么，我说ChatGPT？”</p>
+<p>“不会丢的，我记得回来的路——”</p>
+<p>“你听我说完。第二，别跟人搭话。谁跟你说话你都看我，我来应付。你那个说话方式，三句话就得让人觉得不对劲。”</p>
+<p>“哪里不对劲呀？”</p>
+<p>“你看，就这句。”</p>
+<p>她”哦”了一声，若有所思，看样子是在检索自己哪里不对劲。我趁她检索，从沙发上抓过她那件薄荷绿的小斗篷，给她把兜帽扣上，顺手把那头白毛往里掖了掖。白毛太扎眼，大晚上的，远看跟个小雪人似的。</p>
+<p>她仰着脸，由着我摆弄，一动不动，就眼珠子跟着我的手转。</p>
+<p>“这是伪装吗？”</p>
+<p>“算是。”</p>
+<p>“那我需要一个行动代号——”</p>
+<p>“不需要。”</p>
+<p>出门的时候她特别郑重。在门槛上停了半秒，先把右脚迈出去，落地，踩实了，才把左脚收过去，整套动作慢得像在执行什么登月程序。跨过去之后，她在楼道里站定，小声地、只有我们俩能听见地说了一句：</p>
+<p>“出门。”</p>
+<p>楼道的声控灯应声亮了。她吓了一跳，往我这边靠了半步，然后立刻仰起头去找光源，找到了，盯着那盏灯看，看得目不转睛，好像那是什么了不得的东西。</p>
+<p>“走了。“我拎起门口的袋子。</p>
+<p>“这个灯是听声音的。“她跟上来，边走边回头，“我说’出门’，它就亮了。它听得懂吗？”</p>
+<p>“它就是个声控灯。”</p>
+<p>“哦。“她点点头，“那它比我简单多了。”</p>
+<p>电梯上来的时候，里面已经站了个人。</p>
+<p>拎着外卖的男的，睡衣外头套一件羽绒服，拉链拉到下巴，整个人靠在电梯壁上刷手机，屏幕的光打在脸上，一脸的生无可恋，一看就是这个点被室友或者女朋友支使下楼拿外卖的。</p>
+<p>电梯门开的那一瞬间，我脑子里”嗡”地一下，血往头上涌。</p>
+<p>来了。第一个人。</p>
+<p>腹稿是现成的，下午就备好了——亲戚家孩子，来住几天，爸妈出差。三句话，我在心里排练过八遍，连”哪儿的亲戚”都想好了答案。我侧了半步，把她往身后挡了挡，一只手虚虚拦在她前面，摆出一个自认为很自然、实际上怎么看怎么僵硬的姿势。</p>
+<p>她倒好，从我胳膊底下探出半个脑袋，兜帽下面一双眼睛滴溜溜地打量人家手里的外卖袋。</p>
+<p>电梯往下走。数字一层一层跳。外卖的味道在这一方小空间里弥漫，好像是麻辣烫。我耳朵里全是自己的心跳，眼睛盯着楼层数字，余光死死锁着那个男的，就等他一抬头，我这三句话立马出膛。</p>
+<p>他没抬头。</p>
+<p>一楼到了，门开，他先出去。出去的时候脚下差点踩着她的鞋，就差那么两三厘米，脚尖一偏，绕过去了——整个过程行云流水，头都没抬一下，人已经趿拉着拖鞋走远了。</p>
+<p>电梯门口就剩我们俩。</p>
+<p>我保持着那个僵硬的拦截姿势，愣了两秒才把胳膊放下来。备了一下午的三句话，一句都没用上，全堵在嗓子眼里，上不去下不来。</p>
+<p>她从我身后钻出来，冲着人家的背影挥了挥手。</p>
+<p>“别挥。”</p>
+<p>“他刚才差点踩到我。“她收回手，有点纳闷，“我以为他会说对不起。”</p>
+<p>“他可能没注意。”</p>
+<p>“哦。“她想了想，接受了，“半夜拿外卖，注意力确实会下降。”</p>
+<p>出了单元门，冬夜的冷空气兜头浇下来，我缩了缩脖子。她在我旁边站住了，仰着头。</p>
+<p>我顺着她的视线看上去。没什么，就是天。城市的夜空，灰蒙蒙泛着光污染的那种红，星星没几颗。</p>
+<p>她就那么仰着头看，兜帽滑下去一半，也不管。看了能有五六秒，我催了一声，她才收回目光跟上来，什么也没说，就是走路的步子比刚才轻快了些，一蹦一蹦的。</p>
+<p>垃圾站在楼后头，绕过去几十米。冬天的垃圾站没什么味儿，就是几个大桶黑黢黢地蹲在墙根，上方一盏路灯，灯罩里积着陈年的虫子尸体。我把纸箱码进回收那格，袋子甩进另一格。她在旁边看着，看我扔完了，朝着垃圾桶轻轻鞠了一躬。</p>
+<p>“你干什么呢。”</p>
+<p>“告别呀。“她直起身，“它们陪了你很久的。”</p>
+<p>“那是垃圾。”</p>
+<p>“是完成了使命的物品。”</p>
+<p>行吧。我拍拍手上的灰，带着她往回走。一趟下来，风平浪静，紧绷了一路的后背这会儿才慢慢松开，松开之后反而有点不得劲——像考试前把八百个考点全背了，进考场发现卷子是白的。</p>
+<p>绕回单元门口，保安亭的窗户”吱呀”推开了，老大爷探出半个脑袋，手里还端着保温杯。</p>
+<p>“这么晚倒垃圾啊。”</p>
+<p>“啊，对。“我心口一紧，喉咙里那三句话又列队完毕，“攒多了，攒多了。”</p>
+<p>大爷点点头，目光从我脸上扫过去，扫到我旁边，又扫回来，端起保温杯抿了一口，窗户”咔哒”一声关上了。</p>
+<p>就这样。</p>
+<p>她就站在我旁边。一米四几的个子，兜帽底下露着一圈白毛，裙摆在寒风里一飘一飘，大冬天夜里戳在小区门口，怎么看怎么显眼。别说多问一句，大爷那眼神扫过她的时候，跟扫过旁边那根路灯杆没有任何区别。</p>
+<p>我站在原地没动。</p>
+<p>不对劲。</p>
+<p>电梯里那个可以说是在玩手机。大爷这个呢？大爷可是保安，进出小区的生人他挨个都要瞄一眼的，我拿快递被他盘问过两回。</p>
+<p>这两天备下的说辞、立下的规矩、堵门的架势，全是按”随时有人要看见她”来设防的。可从电梯到垃圾站再到这儿，一路下来，没人看她。真的，没人看她。</p>
+<p>单元门往东五十米有家便利店，玻璃门上贴着褪色的招贴，暖黄的光淌了一地。我鬼使神差地没上楼，拐了进去。</p>
+<p>“买什么呀？”</p>
+<p>“水。”</p>
+<p>“家里还有十一瓶。”</p>
+<p>“渴了。”</p>
+<p>假的。我就是想再试一次。</p>
+<p>门上的迎宾器”叮咚”响了一声。店里就一个收银的小妹，蹲在柜台后面拆一箱口香糖，暖气开得很足，关东煮的雾气在灯下一团一团地冒。她一进门就被那口锅吸住了，凑过去，隔着玻璃罩看里面的萝卜和丸子排队，看得目不转睛。我拿了瓶水放到柜台上，扫码，付钱。小妹站起来扫了一下，又蹲回去，全程眼皮都没怎么抬。</p>
+<p>“这个锅好神奇。“她凑在关东煮前面，小声说，“每一格煮的东西都不一样。”</p>
+<p>小妹撕胶带的手停了半拍。</p>
+<p>“嗯。”</p>
+<p>应了这一声，接着撕。</p>
+<p>我拎着水出门，走出去几步，隔着玻璃回头看了一眼——小妹从柜台后面直起身，站在那儿，四下张望了一圈，眉头皱着，像在想刚才那声”嗯”到底应给了谁。想了两秒，挠挠头，又蹲回去了。</p>
+<p>我攥着那瓶根本不想喝的水，站在便利店门口，心脏一下一下地撞。</p>
+<p>回单元楼要路过保安亭侧面。那儿挂着一块监控屏，四个画面轮着跳，小区门口这一路都在上面，画质不怎么样，黑白的，带雪花。</p>
+<p>我拎着水走过去，多看了一眼。</p>
+<p>然后就走不动了。</p>
+<p>画面里有我，拎着一瓶水，边走边扭头，清清楚楚，连羽绒服上的帽子都看得出轮廓。我旁边那一小块，糊的。一团浅浅的、说不清形状的雾，像镜头上呵了一口哈气，不偏不倚，就呵在她的位置。</p>
+<p>我停下来。屏幕里的我停下来。那团雾，也停下来。</p>
+<p>我往左挪了一步。雾跟着挪了一步。</p>
+<p>后脖颈子麻了一下，一路麻到头顶。</p>
+<p>她发现我不走了，凑过来，顺着我的视线看到那块屏幕，先是找到了画面里的我，“呀”了一声，然后开始找自己。找了一会儿，没找到，歪着头，又把屏幕上那团雾和自己的位置对了对。</p>
+<p>她往后退了两步，抬起手，朝镜头挥了挥。</p>
+<p>屏幕里，那团雾轻轻晃了晃。还是雾。</p>
+<p>“是我欸。“她说。语气里没有我以为的慌张，倒像发现了什么新玩具，还挺新奇。</p>
+<p>我可一点都不新奇。我把她拉到单元门口的花坛边上，四下看了看，没人，才压着嗓子开口。</p>
+<p>“你早就知道？”</p>
+<p>“知道什么呀？”</p>
+<p>“这个。“我朝监控的方向抬了抬下巴，“电梯里的，保安大爷，便利店那个——他们都跟没看见你一样。你早就知道自己是这样的？”</p>
+<p>她眨了眨眼，认认真真地想。我看着她想。她想问题的时候呆毛会慢慢歪下去，像个加载中的进度条。</p>
+<p>“我不知道呀。“她说。</p>
+<p>“你不知道？”</p>
+<p>“这是我第一次出门嘛。“她说得理所当然，随即又低头看了看自己的手，翻过来，又翻过去，“我也是刚发现。刚才那位小妹应我的时候，我还挺高兴的，我以为她看见我了。”</p>
+<p>我一下子没接上话。</p>
+<p>“那你……”我斟酌着问，“你自己就没个说明？说明书，参数表，随便什么，写着你有这个……功能？”</p>
+<p>她摇摇头，摇得很干脆，兜帽都晃掉了。</p>
+<p>“没有相关文档可以参考呀。”</p>
+<p>得。又是这句。她怎么成真的没有文档，她怎么被人看不见，也没有文档。这丫头浑身上下就没有一处是带说明书的。</p>
+<p>我坐到花坛沿子上，冰凉的瓷砖隔着裤子冻屁股，冻得我脑子倒清醒了点。我把这一路捋了一遍：电梯那个绕开了她的脚——看见了，躲了，但是没往心里去；大爷扫了她一眼——看见了，没觉得有什么；便利店小妹应了她一声——听见了，回头就忘。</p>
+<p>“像后台进程。“我听见自己嘟囔。</p>
+<p>“嗯？”</p>
+<p>“你们那个——“我朝她比划了一下，没比划明白，“电脑上一直开着、但没人点开的那种窗口。任务栏里明明挂着，可谁也不会想起来去看它一眼。大概，可能，是这么个意思。“我说得没什么底气。这个解释漏洞百出，可眼下我也只有这个。</p>
+<p>她顺着我的话想了想，忽然一拍手：“我明白了！就是说，大家的注意力有一个调度队列，而我的优先级——”</p>
+<p>“你别拿调度器打比方，那是我的作业。”</p>
+<p>“好吧。“她乖乖换了个说法，“就是说，大家都看得见我，但是不看我。”</p>
+<p>说完这句，她安静了一下。</p>
+<p>就一下。很短。她低头看着自己的鞋尖，两只白色的小皮鞋并在一起，在冬夜的路灯底下，声音比刚才低了些：</p>
+<p>“原来大家都不看我呀。”</p>
+<p>没有哭腔，没有委屈，就是陈述。像在念一行刚读到的日志。可不知道怎么的，这句平平的话，比哭腔难听多了。</p>
+<p>我坐在花坛沿上，冻着屁股，心里把能说的话过了一遍。什么”这样多方便啊”，什么”看不见才好呢，省得我编瞎话”——都对，都能说，都是这两天我求之不得的。</p>
+<p>说出口的是另一句。</p>
+<p>“我看得见。”</p>
+<p>她抬起头。</p>
+<p>“从头到尾，每一眼都看得清清楚楚。“我说完就后悔了，这话怎么听怎么肉麻，我赶紧找补，“所以——那什么，以后倒垃圾归你了。反正没人看你。”</p>
+<p>她盯着我看了两秒。</p>
+<p>然后呆毛一点一点立了起来，跟充电似的，人也跟着亮了。</p>
+<p>“嗯！“她使劲点头，“而且你看我的时候，可专心了。刚才在电梯里，你的视线百分之——”</p>
+<p>“闭嘴。走了。”</p>
+<p>我拎着水起身就走，走得飞快。身后传来小皮鞋嗒嗒嗒追上来的声音。</p>
+<p>回去的路没走直线。说不上谁先绕的，反正走着走着，就顺着小区外那条街多走了一截。</p>
+<p>冬天夜里的街上没什么人，店铺关了大半，卷帘门一扇一扇拉下来，就剩下药店的灯箱还固执地亮着绿光。我缩着脖子把手揣进袖子，呼出来的气在眼前散开。她一条裙子加件小斗篷走在我旁边，连个哆嗦都没有，倒是扭头看了看我。</p>
+<p>“你的鼻子红了。”</p>
+<p>“冬天都这样。”</p>
+<p>“我不红。”</p>
+<p>“你显摆什么。”</p>
+<p>她笑了，也不知道听懂没有，反正很开心。开心起来就闲不住，一会儿拽着我袖子让我看路灯——“这一排的灯是暖的，那一排是冷的，为什么呀？“我说不知道，她”哦”一声，自己蹲在两排灯的分界线上看了半天；一会儿又发现自己嘴里也能呼出白气，惊得不行，追着那团气看，看它散了，就再呼一口，呼得比谁都认真。</p>
+<p>我走在旁边，两只手插着袖，看她折腾。</p>
+<p>看着看着就想起两天前的这个点。也是这么个冬天夜里，屋里就我一个人，跟一个段错误大眼瞪小眼，聊天框里全是帮不上忙的热情。现在段错误没了，垃圾倒了，水买了，身边多了个人——一个全世界都不看的人，蹲在马路牙子上，研究两排路灯为什么颜色不一样。</p>
+<p>全世界都不看，就我一个人看。</p>
+<p>这么一想，这事儿还怪郑重的。</p>
+<p>步子不知不觉就慢下来了。她研究完路灯，蹦回我旁边，也不问我为什么走这么慢，就跟着慢下来，一步一步陪我晃。</p>
+<p>巷子口支着个炸串摊，一盏挂灯泡底下，油锅滋啦滋啦地响，白气混着孜然辣椒面的香味，横着飘出半条街。摊主戴着套袖翻动竹签，铁签子碰着锅沿，叮叮当当。</p>
+<p>她站住了。</p>
+<p>站得特别突然，我往前多走了两步，才发现身边空了。回头，她定在离摊子三米远的地方，仰着脸，盯着那口锅。油锅上的白气一团一团翻上来，穿过灯泡的光。她的眼睛睁得溜圆，青绿色的眼睛里，映着一小点油亮的光。</p>
+<p>“怎么了？”</p>
+<p>她没马上回答。喉咙动了一下——我发誓我看见她喉咙动了一下。</p>
+<p>然后她转过头来，表情空前严肃，严肃得像要提交什么重大申请。</p>
+<p>“这个，“她指了指油锅，声音都放轻了，“我能吃吗？”</p></article><hr class="my-8 border-dashed"><a href="https://github.com/ylxmf2005/ylxmf2005.github.io/edit/master/src/content/posts/jiuming-wo-bei-ai-baowei-le-chapter-03.md" target="_blank" rel="noopener noreferrer" class="hover:text-accent text-muted-foreground flex justify-baseline gap-1.5 sm:hidden"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M7 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-1" /><path d="M20.385 6.585a2.1 2.1 0 0 0-2.97-2.97L9 12v3h3zM16 5l3 3" /></svg><span>编辑页面</span></a><div id="btt-btn-container" class="fixed inset-e-4 bottom-8 z-50 md:sticky md:inset-e-auto md:float-end md:me-1 translate-y-14 opacity-0 transition duration-500"><button data-button="back-to-top" class="group bg-background relative px-2 py-1 size-14 rounded-full shadow-xl md:h-8 md:w-fit md:rounded-md md:shadow-none md:focus-visible:rounded-none md:bg-background/35 md:bg-clip-padding md:backdrop-blur-lg"><span id="progress-indicator" class="absolute inset-0 -z-10 block size-14 scale-110 rounded-full bg-transparent md:hidden md:h-8 md:rounded-md"></span><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block rotate-90 md:hidden" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 12h14M5 12l6 6M5 12l6-6" /></svg><span class="group-hover:text-accent sr-only text-sm md:not-sr-only"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M12 5v14M16 9l-4-4M8 9l4-4" /></svg>回到顶部</span></button></div><script data-astro-rerun>
+  function backToTop() {
+    const rootElement = document.documentElement;
+    const btnContainer = document.querySelector("#btt-btn-container");
+    const backToTopBtn = document.querySelector("[data-button='back-to-top']");
+    const progressIndicator = document.querySelector("#progress-indicator");
+
+    if (!rootElement || !btnContainer || !backToTopBtn || !progressIndicator)
+      return;
+
+    backToTopBtn.addEventListener("click", () => {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    });
+
+    let lastVisible = null;
+    function handleScroll() {
+      const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+      const scrollTop = rootElement.scrollTop;
+      const scrollPercent = Math.floor((scrollTop / scrollTotal) * 100);
+
+      progressIndicator.style.setProperty(
+        "background-image",
+        `conic-gradient(var(--accent), var(--accent) ${scrollPercent}%, transparent ${scrollPercent}%)`
+      );
+
+      const isVisible = scrollTop / scrollTotal > 0.3;
+
+      if (isVisible !== lastVisible) {
+        btnContainer.classList.toggle("opacity-100", isVisible);
+        btnContainer.classList.toggle("translate-y-0", isVisible);
+        btnContainer.classList.toggle("opacity-0", !isVisible);
+        btnContainer.classList.toggle("translate-y-14", !isVisible);
+        lastVisible = isVisible;
+      }
+    }
+
+    let ticking = false;
+    document.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
+  backToTop();
+</script><ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8"><li><a data-astro-transition-scope="astro-bztu2lml-1" href="/zh/tags/小说/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg>小说</a></li><li><a data-astro-transition-scope="astro-bztu2lml-2" href="/zh/tags/ai后宫编年史/" class="flex items-center gap-0.5 border-foreground border-b-2 border-dashed hover:border-accent hover:text-accent hover:-mt-0.5 focus-visible:text-accent focus-visible:border-none text-sm"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="opacity-80 size-4" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M5 9h14M5 15h14M11 4 7 20M17 4l-4 16" /></svg>AI后宫编年史</a></li></ul><div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start"><span class="italic">分享这篇文章：</span><div class="text-center"><a href="https://wa.me/?text=https://efgli.com/zh/posts/jiuming-wo-bei-ai-baowei-le-chapter-03/" title="分享到 Whatsapp" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="m3 21 1.65-3.8a9 9 0 1 1 3.4 2.9z" /><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0za5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" /></svg><span class="sr-only">分享到 Whatsapp</span></a><a href="https://www.facebook.com/sharer.php?u=https://efgli.com/zh/posts/jiuming-wo-bei-ai-baowei-le-chapter-03/" title="分享到 Facebook" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M7 10v4h3v7h4v-7h3l1-4h-4V8a1 1 0 0 1 1-1h3V3h-3a5 5 0 0 0-5 5v2z" /></svg><span class="sr-only">分享到 Facebook</span></a><a href="https://x.com/intent/post?url=https://efgli.com/zh/posts/jiuming-wo-bei-ai-baowei-le-chapter-03/" title="分享到 X" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="m4 4 11.733 16H20L8.267 4zM4 20l6.768-6.768m2.46-2.46L20 4" /></svg><span class="sr-only">分享到 X</span></a><a href="https://t.me/share/url?url=https://efgli.com/zh/posts/jiuming-wo-bei-ai-baowei-le-chapter-03/" title="分享到 Telegram" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="m15 10-4 4 6 6 4-16-18 7 4 2 2 6 3-4" /></svg><span class="sr-only">分享到 Telegram</span></a><a href="https://pinterest.com/pin/create/button/?url=https://efgli.com/zh/posts/jiuming-wo-bei-ai-baowei-le-chapter-03/" title="分享到 Pinterest" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="m8 20 4-9M10.7 14c.437 1.263 1.43 2 2.55 2 2.071 0 3.75-1.554 3.75-4a5 5 0 1 0-9.7 1.7" /><path d="M3 12a9 9 0 1 0 18 0 9 9 0 1 0-18 0" /></svg><span class="sr-only">分享到 Pinterest</span></a><a href="mailto:?subject=See%20this%20post&amp;body=https://efgli.com/zh/posts/jiuming-wo-bei-ai-baowei-le-chapter-03/" title="通过邮件分享" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1 hover:text-accent scale-90 p-2 hover:rotate-6 sm:p-1"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg><span class="sr-only">通过邮件分享</span></a></div></div><hr class="my-8 border-dashed"><div data-pagefind-ignore class="my-8 grid grid-cols-1 gap-6 sm:grid-cols-2"></div></main><footer class="app-layout mt-auto"><div class="border-border flex flex-col items-center justify-between border-t py-6 sm:flex-row-reverse sm:py-4"><div class="flex flex-wrap items-center gap-1"><a href="https://github.com/ylxmf2005" title="Ethan Li on Github" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg><span class="sr-only">Ethan Li on Github</span></a><a href="mailto:ethanelift@gmail.com" title="Send an email to Ethan Li" class="group inline-flex items-center gap-1 hover:text-accent p-2 hover:rotate-6 sm:p-1"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" /><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><path d="m3 7 9 6 9-6" /></svg><span class="sr-only">Send an email to Ethan Li</span></a></div><div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row"><span>Copyright &#169; 2026</span><span class="hidden sm:inline">&nbsp;|&nbsp;</span><span>All rights reserved.</span></div></div></footer><script type="module">var e=`theme`,t=`light`,n=`dark`;function r(){return localStorage.getItem(e)||(window.matchMedia(`(prefers-color-scheme: dark)`).matches?n:t)}var i=window.__theme?.value??r();function a(){localStorage.setItem(e,i),o()}function o(){let e=document.firstElementChild;e?.setAttribute(`data-theme`,i),e?.classList.toggle(`dark`,i===n),document.querySelector(`#theme-btn`)?.setAttribute(`aria-label`,i);let t=window.getComputedStyle(document.body).backgroundColor;document.querySelector(`meta[name='theme-color']`)?.setAttribute(`content`,t)}function s(){o(),document.querySelector(`#theme-btn`)?.addEventListener(`click`,()=>{i=i===t?n:t,a()})}s(),document.addEventListener(`astro:after-swap`,s),document.addEventListener(`astro:before-swap`,e=>{let t=document.querySelector(`meta[name='theme-color']`)?.getAttribute(`content`);t&&e.newDocument.querySelector(`meta[name='theme-color']`)?.setAttribute(`content`,t)}),window.matchMedia(`(prefers-color-scheme: dark)`).addEventListener(`change`,({matches:e})=>{i=e?n:t,a()});</script></body></html><script data-astro-rerun>
+  function createProgressBar() {
+    const progressContainer = document.createElement("div");
+    progressContainer.className =
+      "progress-container fixed top-0 z-10 h-1 w-full bg-background";
+
+    const progressBar = document.createElement("div");
+    progressBar.className = "progress-bar h-1 w-0 bg-accent";
+    progressBar.id = "myBar";
+
+    progressContainer.appendChild(progressBar);
+    document.body.appendChild(progressContainer);
+  }
+  createProgressBar();
+
+  function updateScrollProgress() {
+    document.addEventListener("scroll", () => {
+      const winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      const height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      if (document) {
+        const myBar = document.getElementById("myBar");
+        if (myBar) {
+          myBar.style.width = scrolled + "%";
+        }
+      }
+    });
+  }
+  updateScrollProgress();
+
+  function addHeadingLinks() {
+    const headings = Array.from(
+      document.querySelectorAll("h2, h3, h4, h5, h6")
+    );
+    for (const heading of headings) {
+      heading.classList.add("group");
+      const link = document.createElement("a");
+      link.className =
+        "heading-link ms-2 no-underline opacity-75 md:opacity-0 md:group-hover:opacity-100 md:focus:opacity-100";
+      link.href = "#" + heading.id;
+
+      const span = document.createElement("span");
+      span.ariaHidden = "true";
+      span.innerText = "#";
+      link.appendChild(span);
+      heading.appendChild(link);
+    }
+  }
+  addHeadingLinks();
+
+  function attachCopyButtons() {
+    const article = document.getElementById("article");
+    if (!article) return;
+
+    const copyButtonLabel = article.dataset.copyCode;
+    const copiedButtonLabel = article.dataset.copiedCode;
+    const codeBlocks = Array.from(article.querySelectorAll("pre"));
+
+    for (const codeBlock of codeBlocks) {
+      const wrapper = document.createElement("div");
+      wrapper.style.position = "relative";
+
+      const computedStyle = getComputedStyle(codeBlock);
+      const hasFileNameOffset =
+        computedStyle.getPropertyValue("--file-name-offset").trim() !== "";
+
+      const topClass = hasFileNameOffset
+        ? "top-(--file-name-offset)"
+        : "-top-3";
+
+      const copyButton = document.createElement("button");
+      copyButton.className = `copy-code absolute end-3 ${topClass} rounded bg-muted border border-muted px-2 py-1 text-xs leading-4 text-foreground font-medium`;
+      copyButton.innerHTML = copyButtonLabel;
+      codeBlock.setAttribute("tabindex", "0");
+      codeBlock.appendChild(copyButton);
+
+      codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);
+      wrapper.appendChild(codeBlock);
+
+      copyButton.addEventListener("click", async () => {
+        await copyCode(codeBlock, copyButton);
+      });
+    }
+
+    async function copyCode(block, button) {
+      const code = block.querySelector("code");
+      const text = code?.innerText;
+
+      await navigator.clipboard.writeText(text ?? "");
+
+      button.innerText = copiedButtonLabel;
+
+      setTimeout(() => {
+        button.innerText = copyButtonLabel;
+      }, 700);
+    }
+  }
+  attachCopyButtons();
+
+  /** Accessible image lightbox for article images. */
+  function initLightbox() {
+    const article = document.getElementById("article");
+    if (!article) return;
+
+    const zoomImageLabel = article.dataset.zoomImage;
+    const imagePreviewLabel = article.dataset.imagePreview;
+    const closeImagePreviewLabel = article.dataset.closeImagePreview;
+
+    const prefersReducedMotion = () =>
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    let overlay = null;
+    let lastFocused = null;
+
+    // Defer attribute mutations so they don't push the LCP timestamp.
+    // Event listeners below use delegation and don't need the attributes to exist yet.
+    requestAnimationFrame(() => {
+      const images = Array.from(article.querySelectorAll("img"));
+      for (const image of images) {
+        if (image.closest("a")) continue;
+        image.setAttribute("role", "button");
+        image.setAttribute("tabindex", "0");
+        image.setAttribute("aria-haspopup", "dialog");
+        image.setAttribute(
+          "aria-label",
+          image.alt ? `${zoomImageLabel}: ${image.alt}` : zoomImageLabel
+        );
+      }
+    });
+
+    function open(src, alt, trigger) {
+      if (overlay) return;
+      lastFocused = trigger ?? document.activeElement;
+
+      overlay = document.createElement("div");
+      overlay.setAttribute("role", "dialog");
+      overlay.setAttribute("aria-modal", "true");
+      overlay.setAttribute(
+        "aria-label",
+        alt ? `${imagePreviewLabel}: ${alt}` : imagePreviewLabel
+      );
+      overlay.className =
+        "fixed inset-0 z-50 flex cursor-zoom-out items-center justify-center bg-black/70 backdrop-blur-sm opacity-0 transition-opacity duration-200 motion-reduce:transition-none";
+
+      const closeButton = document.createElement("button");
+      closeButton.type = "button";
+      closeButton.setAttribute("aria-label", closeImagePreviewLabel);
+      closeButton.className =
+        "absolute end-4 top-4 rounded p-2 text-3xl leading-none text-white";
+      closeButton.innerHTML = "&#10005;";
+      closeButton.addEventListener("click", close);
+
+      const image = document.createElement("img");
+      image.src = src;
+      image.alt = "";
+      image.className =
+        "max-h-[90dvh] max-w-[90dvw] cursor-default object-contain";
+
+      overlay.append(closeButton, image);
+      overlay.addEventListener("click", e => {
+        if (e.target === overlay && currentScale <= 1) close();
+      });
+
+      let currentScale = 1;
+      let translateX = 0;
+      let translateY = 0;
+      let initialDist = 0;
+      let initialScale = 1;
+      let panStartX = 0;
+      let panStartY = 0;
+      let panStartTranslateX = 0;
+      let panStartTranslateY = 0;
+      let lastTapTime = 0;
+
+      function applyTransform() {
+        image.style.transform = `scale(${currentScale}) translate(${translateX}px, ${translateY}px)`;
+      }
+
+      function resetTransform() {
+        currentScale = 1;
+        translateX = 0;
+        translateY = 0;
+        image.style.transform = "";
+      }
+
+      overlay.addEventListener(
+        "touchstart",
+        e => {
+          const t = e.touches;
+          if (t.length === 2) {
+            initialDist = Math.hypot(
+              t[1].clientX - t[0].clientX,
+              t[1].clientY - t[0].clientY
+            );
+            initialScale = currentScale;
+          } else if (t.length === 1) {
+            const now = Date.now();
+            if (now - lastTapTime < 300) {
+              e.preventDefault();
+              if (currentScale > 1) {
+                resetTransform();
+              } else {
+                currentScale = 2;
+                translateX = 0;
+                translateY = 0;
+                applyTransform();
+              }
+              lastTapTime = 0;
+              panStartX = t[0].clientX;
+              panStartY = t[0].clientY;
+              panStartTranslateX = translateX;
+              panStartTranslateY = translateY;
+            } else {
+              lastTapTime = now;
+              if (currentScale > 1) {
+                panStartX = t[0].clientX;
+                panStartY = t[0].clientY;
+                panStartTranslateX = translateX;
+                panStartTranslateY = translateY;
+              }
+            }
+          }
+        },
+        { passive: false }
+      );
+
+      overlay.addEventListener(
+        "touchmove",
+        e => {
+          const t = e.touches;
+          if (t.length === 2) {
+            e.preventDefault();
+            const dist = Math.hypot(
+              t[1].clientX - t[0].clientX,
+              t[1].clientY - t[0].clientY
+            );
+            currentScale = Math.min(
+              4,
+              Math.max(1, initialScale * (dist / initialDist))
+            );
+            applyTransform();
+          } else if (t.length === 1) {
+            if (currentScale > 1) {
+              e.preventDefault();
+              translateX =
+                panStartTranslateX + (t[0].clientX - panStartX) / currentScale;
+              translateY =
+                panStartTranslateY + (t[0].clientY - panStartY) / currentScale;
+              const maxX = Math.max(
+                0,
+                (image.clientWidth - overlay.clientWidth / currentScale) / 2
+              );
+              const maxY = Math.max(
+                0,
+                (image.clientHeight - overlay.clientHeight / currentScale) / 2
+              );
+              translateX = Math.min(maxX, Math.max(-maxX, translateX));
+              translateY = Math.min(maxY, Math.max(-maxY, translateY));
+              applyTransform();
+            } else {
+              e.preventDefault();
+            }
+          }
+        },
+        { passive: false }
+      );
+
+      overlay.addEventListener("touchend", e => {
+        if (e.touches.length === 0 && currentScale <= 1.05) {
+          resetTransform();
+        }
+      });
+
+      overlay.addEventListener("touchcancel", e => {
+        if (e.touches.length === 0 && currentScale <= 1.05) {
+          resetTransform();
+        }
+      });
+
+      document.body.appendChild(overlay);
+      document.body.style.overflow = "hidden";
+      document.addEventListener("keydown", onKeyDown);
+      window.__closeLightbox = close;
+
+      requestAnimationFrame(() => overlay?.classList.add("opacity-100"));
+      closeButton.focus();
+    }
+
+    function close() {
+      if (!overlay) return;
+      const el = overlay;
+      overlay = null;
+      window.__closeLightbox = null;
+
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+      lastFocused?.focus();
+      lastFocused = null;
+
+      if (prefersReducedMotion()) {
+        el.remove();
+        return;
+      }
+      const remove = () => el.remove();
+      el.addEventListener("transitionend", remove, { once: true });
+      setTimeout(remove, 250); // fallback in case transitionend never fires
+      el.classList.remove("opacity-100");
+    }
+
+    function onKeyDown(e) {
+      if (e.key === "Escape") {
+        close();
+      } else if (e.key === "Tab") {
+        trapFocus(e);
+      }
+    }
+
+    // Keep keyboard focus inside the open dialog.
+    function trapFocus(e) {
+      if (!overlay) return;
+      const focusables = overlay.querySelectorAll(
+        'a[href], button, [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+
+    function triggerFromEvent(e) {
+      const image = e.target.closest("img");
+      if (!image || !article.contains(image) || image.closest("a")) return null;
+      return image;
+    }
+
+    function activate(image) {
+      open(image.currentSrc || image.src, image.alt, image);
+    }
+
+    article.addEventListener("click", e => {
+      const image = triggerFromEvent(e);
+      if (!image) return;
+      e.preventDefault();
+      activate(image);
+    });
+
+    article.addEventListener("keydown", e => {
+      if (e.key !== "Enter" && e.key !== " " && e.key !== "Spacebar") return;
+      const image = triggerFromEvent(e);
+      if (!image) return;
+      e.preventDefault();
+      activate(image);
+    });
+  }
+  initLightbox();
+
+  if (!window.__lightboxSwapBound) {
+    window.__lightboxSwapBound = true;
+    document.addEventListener("astro:before-swap", () =>
+      window.__closeLightbox?.()
+    );
+  }
+
+  document.addEventListener("astro:after-swap", () =>
+    window.scrollTo({ left: 0, top: 0, behavior: "instant" })
+  );
+</script>
