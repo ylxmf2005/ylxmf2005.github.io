@@ -2,13 +2,13 @@
 title: 第三章 存在感
 published: 2026-07-05
 description: 她想帮忙倒垃圾，却第一次意识到，自己在这个世界上的存在感并不稳定。
-tags: [小说, AI后宫编年史]
+tags: [小说, 完蛋，我被AI包围了！]
 category: 小说
 lang: zh
 draft: false
 hidden: true
 series: ai-hougong-biannianshi
-seriesTitle: AI后宫编年史
+seriesTitle: 完蛋，我被AI包围了！
 chapter: 3
 ---
 

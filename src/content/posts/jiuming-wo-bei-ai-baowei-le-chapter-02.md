@@ -2,13 +2,13 @@
 title: 第二章 家被优化了
 published: 2026-07-04
 description: 作业交掉后的第二天，家被 ChatGPT 重新整理，也顺手整理出了新的规矩。
-tags: [小说, AI后宫编年史]
+tags: [小说, 完蛋，我被AI包围了！]
 category: 小说
 lang: zh
 draft: false
 hidden: true
 series: ai-hougong-biannianshi
-seriesTitle: AI后宫编年史
+seriesTitle: 完蛋，我被AI包围了！
 chapter: 2
 ---
 
