@@ -1,0 +1,14 @@
+---
+import SeriesPage from "../../series/[slug].astro";
+import { getChineseSeries } from "@/utils/series";
+
+export async function getStaticPaths() {
+  const seriesList = await getChineseSeries();
+  return seriesList.map(series => ({
+    params: { slug: series.slug },
+    props: { series },
+  }));
+}
+---
+
+<SeriesPage {...Astro.props} />

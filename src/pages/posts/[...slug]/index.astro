@@ -87,7 +87,7 @@ const ogImage = ogImageUrl
   <main
     id="main-content"
     class:list={["app-layout", { "mt-8": !config.features.showBackButton }]}
-    data-pagefind-body
+    data-pagefind-body={post.data.hidden ? undefined : true}
   >
     <h1
       style={{ viewTransitionName: toTransitionName(title) }}
