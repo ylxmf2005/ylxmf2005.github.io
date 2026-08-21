@@ -23,6 +23,10 @@ import config from "./astro-paper.config";
 
 export default defineConfig({
   site: config.site.url,
+  redirects: {
+    "/series/ai-hougong-biannianshi": "/series/wan-dan-wo-bei-ai-baowei-le",
+    "/zh/series/ai-hougong-biannianshi": "/zh/series/wan-dan-wo-bei-ai-baowei-le",
+  },
   integrations: [
     mdx(),
     sitemap({
