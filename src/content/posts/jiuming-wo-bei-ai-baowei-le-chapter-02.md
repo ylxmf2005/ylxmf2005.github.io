@@ -5,7 +5,7 @@ description: 作业交掉后的第二天，家被 ChatGPT 重新整理，也顺�
 tags: [小说, 完蛋，我被AI包围了！]
 category: 小说
 lang: zh
-draft: false
+draft: true
 hidden: true
 series: wan-dan-wo-bei-ai-baowei-le
 seriesTitle: 完蛋，我被AI包围了！
