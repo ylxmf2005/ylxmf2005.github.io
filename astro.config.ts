@@ -2,6 +2,7 @@ import {
   defineConfig,
   envField,
   fontProviders,
+  sharpImageService,
   svgoOptimizer,
 } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
@@ -61,6 +62,11 @@ export default defineConfig({
         transformerNotationDiff({ matchAlgorithm: "v3" }),
       ],
     },
+  },
+  // 文章插图在构建时会被转成 webp。sharp 默认质量 80，插画（尤其小说配图）会明显发糊，
+  // 所以提到 95：源图存无损，只在这里压一次。
+  image: {
+    service: sharpImageService({ webp: { quality: 95 } }),
   },
   vite: {
     plugins: [tailwindcss()],
