@@ -432,7 +432,7 @@ chapter: 2
 
 “嗯，水是热的。”
 
-![泡在浴缸里的她](./images/ch02-bath.webp)
+<video src="./images/ch02-bath.mp4" autoplay loop muted playsinline style="max-width:100%;border-radius:8px"></video>
 
 “这瓶是沐浴露。这瓶是洗面奶。这罐是主人的剃须泡沫，不能用。”
 
