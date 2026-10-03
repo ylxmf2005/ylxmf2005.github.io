@@ -20,6 +20,7 @@ import {
   transformerNotationWordHighlight,
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
+import { remarkVideo } from "./src/utils/remarkVideo";
 import config from "./astro-paper.config";
 
 export default defineConfig({
@@ -48,6 +49,7 @@ export default defineConfig({
         [remarkMath, { singleDollarTextMath: true }],
         remarkToc,
         [remarkCollapse, { test: "Table of contents" }],
+        remarkVideo,
       ],
       rehypePlugins: [rehypeKatex, rehypeCallouts],
     }),

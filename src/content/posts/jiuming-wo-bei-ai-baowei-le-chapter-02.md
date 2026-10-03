@@ -432,7 +432,7 @@ chapter: 2
 
 “嗯，水是热的。”
 
-<video src="./images/ch02-bath.mp4" autoplay loop muted playsinline style="max-width:100%;border-radius:8px"></video>
+![泡在浴缸里的她](./images/ch02-bath.mp4)
 
 “这瓶是沐浴露。这瓶是洗面奶。这罐是主人的剃须泡沫，不能用。”
 
@@ -461,6 +461,8 @@ chapter: 2
 “那你会喷水吗？”
 
 “嗯，喷水……”她歪着头，眼睛往上看，好像在脑子里先试了一遍。
+
+![她想象自己喷水](./images/ch02-spout.webp)
 
 “嗯，想好了。”她点点头，“先喝一大口，腮帮子鼓起来，再往上‘噗’。”
 
